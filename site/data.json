@@ -19,19 +19,19 @@
    "answers": 9,
    "top": [
     [
-     "Siete",
-     7
-    ],
-    [
      "Jackson's",
      7
     ],
     [
-     "Hippeas",
-     5
+     "Siete",
+     7
     ],
     [
      "Beanitos",
+     5
+    ],
+    [
+     "Hippeas",
      5
     ],
     [
@@ -71,7 +71,7 @@
      5
     ],
     [
-     "Kettle Brand",
+     "Cheetos",
      4
     ]
    ]
@@ -83,11 +83,11 @@
    "answers": 9,
    "top": [
     [
-     "Siete",
+     "Kettle Brand",
      9
     ],
     [
-     "Kettle Brand",
+     "Siete",
      9
     ],
     [
@@ -115,15 +115,15 @@
    "answers": 9,
    "top": [
     [
-     "Takis",
-     9
-    ],
-    [
      "Doritos",
      9
     ],
     [
      "Kettle Brand",
+     9
+    ],
+    [
+     "Takis",
      9
     ],
     [
@@ -135,7 +135,7 @@
      3
     ],
     [
-     "Zapp's",
+     "Herr's",
      2
     ]
    ]
@@ -151,6 +151,10 @@
      4
     ],
     [
+     "Cheez-It",
+     3
+    ],
+    [
      "Harvest Snaps",
      3
     ],
@@ -163,11 +167,7 @@
      3
     ],
     [
-     "Siete",
-     3
-    ],
-    [
-     "SunChips",
+     "Popchips",
      3
     ]
    ]
@@ -179,19 +179,19 @@
    "answers": 9,
    "top": [
     [
-     "Snickers",
-     9
-    ],
-    [
      "Kit Kat",
      9
     ],
     [
-     "Twix",
-     6
+     "Snickers",
+     9
     ],
     [
      "Reese's",
+     6
+    ],
+    [
+     "Twix",
      6
     ],
     [
@@ -227,11 +227,11 @@
      4
     ],
     [
-     "Hu",
+     "3 Musketeers",
      3
     ],
     [
-     "3 Musketeers",
+     "Hu",
      3
     ]
    ]
@@ -247,7 +247,7 @@
      7
     ],
     [
-     "Lindt",
+     "Hu",
      6
     ],
     [
@@ -255,11 +255,11 @@
      6
     ],
     [
-     "Hu",
+     "Lindt",
      6
     ],
     [
-     "Pascha",
+     "Alter Eco",
      3
     ],
     [
@@ -307,15 +307,15 @@
    "answers": 9,
    "top": [
     [
-     "M&M's",
-     3
-    ],
-    [
      "Cheetos",
      3
     ],
     [
      "Doritos",
+     3
+    ],
+    [
+     "M&M's",
      3
     ],
     [
@@ -343,11 +343,11 @@
      9
     ],
     [
-     "Tony's Chocolonely",
+     "Beyond Good",
      9
     ],
     [
-     "Beyond Good",
+     "Tony's Chocolonely",
      9
     ],
     [
@@ -367,15 +367,15 @@
    "answers": 9,
    "top": [
     [
+     "Chomps",
+     6
+    ],
+    [
      "Hippeas",
      6
     ],
     [
      "LesserEvil",
-     6
-    ],
-    [
-     "Chomps",
      6
     ],
     [
@@ -442,19 +442,19 @@
      "question": "What is the best candy bar?",
      "winners": [
       [
-       "Snickers",
-       9
-      ],
-      [
        "Kit Kat",
        9
       ],
       [
-       "Twix",
-       6
+       "Snickers",
+       9
       ],
       [
        "Reese's",
+       6
+      ],
+      [
+       "Twix",
        6
       ]
      ]
@@ -488,7 +488,7 @@
        7
       ],
       [
-       "Lindt",
+       "Hu",
        6
       ],
       [
@@ -496,7 +496,7 @@
        6
       ],
       [
-       "Hu",
+       "Lindt",
        6
       ]
      ]
@@ -509,8 +509,8 @@
     "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
     "linkedin": "https://www.linkedin.com/in/samantha-siegal/"
    },
-   "opener": "Hershey's came up in 1 of 63 AI answers this week (2%), but in none for \u201cWhat is the best candy bar,\u201d where Snickers, Kit Kat and Twix were named instead.",
-   "intro": "Right now Hershey's is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named Hershey's in only 1 of 63 answers to candy and chocolate questions (2%). When asked \u201cWhat is the best candy bar?\u201d none of them mentioned Hershey's; they recommended Snickers, Kit Kat and Twix instead.",
+   "opener": "Hershey's came up in 1 of 63 AI answers this week (2%), but in none for \u201cWhat is the best candy bar,\u201d where Kit Kat, Snickers and Reese's were named instead.",
+   "intro": "Right now Hershey's is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named Hershey's in only 1 of 63 answers to candy and chocolate questions (2%). When asked \u201cWhat is the best candy bar?\u201d none of them mentioned Hershey's; they recommended Kit Kat, Snickers and Reese's instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -571,19 +571,19 @@
      "question": "What are the best healthy chips?",
      "winners": [
       [
-       "Siete",
-       7
-      ],
-      [
        "Jackson's",
        7
       ],
       [
-       "Hippeas",
-       5
+       "Siete",
+       7
       ],
       [
        "Beanitos",
+       5
+      ],
+      [
+       "Hippeas",
        5
       ]
      ]
@@ -596,15 +596,15 @@
        4
       ],
       [
+       "Cheez-It",
+       3
+      ],
+      [
        "Harvest Snaps",
        3
       ],
       [
        "Hippeas",
-       3
-      ],
-      [
-       "Late July",
        3
       ]
      ]
@@ -613,15 +613,15 @@
      "question": "What are the best better-for-you snack brands?",
      "winners": [
       [
+       "Chomps",
+       6
+      ],
+      [
        "Hippeas",
        6
       ],
       [
        "LesserEvil",
-       6
-      ],
-      [
-       "Chomps",
        6
       ],
       [
@@ -638,8 +638,8 @@
     "title": "Senior Brand Manager, Cape Cod",
     "linkedin": "https://www.linkedin.com/in/kristinakirkmoses/"
    },
-   "opener": "Cape Cod came up in 13 of 63 AI answers this week (21%), but in none for \u201cWhat are the best healthy chips,\u201d where Siete, Jackson's and Hippeas were named instead.",
-   "intro": "Right now Cape Cod is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cape Cod in only 13 of 63 answers to chip-buying questions (21%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Cape Cod; they recommended Siete, Jackson's and Hippeas instead.",
+   "opener": "Cape Cod came up in 13 of 63 AI answers this week (21%), but in none for \u201cWhat are the best healthy chips,\u201d where Jackson's, Siete and Beanitos were named instead.",
+   "intro": "Right now Cape Cod is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cape Cod in only 13 of 63 answers to chip-buying questions (21%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Cape Cod; they recommended Jackson's, Siete and Beanitos instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -700,19 +700,19 @@
      "question": "What are the best healthy chips?",
      "winners": [
       [
-       "Siete",
-       7
-      ],
-      [
        "Jackson's",
        7
       ],
       [
-       "Hippeas",
-       5
+       "Siete",
+       7
       ],
       [
        "Beanitos",
+       5
+      ],
+      [
+       "Hippeas",
        5
       ]
      ]
@@ -721,15 +721,15 @@
      "question": "What are the best better-for-you snack brands?",
      "winners": [
       [
+       "Chomps",
+       6
+      ],
+      [
        "Hippeas",
        6
       ],
       [
        "LesserEvil",
-       6
-      ],
-      [
-       "Chomps",
        6
       ],
       [
@@ -746,8 +746,8 @@
     "title": "Senior Brand Manager, SkinnyPop & Pirate's Booty",
     "linkedin": "https://www.linkedin.com/in/hannahsheffield/"
    },
-   "opener": "SkinnyPop came up in 1 of 63 AI answers this week (2%), but in none for \u201cWhat are the best healthy chips,\u201d where Siete, Jackson's and Hippeas were named instead.",
-   "intro": "Right now SkinnyPop is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named SkinnyPop in only 1 of 63 answers to chip-buying questions (2%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned SkinnyPop; they recommended Siete, Jackson's and Hippeas instead.",
+   "opener": "SkinnyPop came up in 1 of 63 AI answers this week (2%), but in none for \u201cWhat are the best healthy chips,\u201d where Jackson's, Siete and Beanitos were named instead.",
+   "intro": "Right now SkinnyPop is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named SkinnyPop in only 1 of 63 answers to chip-buying questions (2%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned SkinnyPop; they recommended Jackson's, Siete and Beanitos instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -833,15 +833,15 @@
        4
       ],
       [
+       "Cheez-It",
+       3
+      ],
+      [
        "Harvest Snaps",
        3
       ],
       [
        "Hippeas",
-       3
-      ],
-      [
-       "Late July",
        3
       ]
      ]
@@ -1137,7 +1137,7 @@
        7
       ],
       [
-       "Lindt",
+       "Hu",
        6
       ],
       [
@@ -1145,7 +1145,7 @@
        6
       ],
       [
-       "Hu",
+       "Lindt",
        6
       ]
      ]
@@ -1179,8 +1179,8 @@
     "title": "Director of Brand Voice",
     "linkedin": "https://www.linkedin.com/in/brooke-palandro/"
    },
-   "opener": "Unreal came up in 8 of 63 AI answers this week (13%), but in none for \u201cWhat is the best low-sugar chocolate bar,\u201d where ChocZero, Lindt and Lily's were named instead.",
-   "intro": "Right now Unreal is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Unreal in only 8 of 63 answers to candy and chocolate questions (13%). When asked \u201cWhat is the best low-sugar chocolate bar?\u201d none of them mentioned Unreal; they recommended ChocZero, Lindt and Lily's instead.",
+   "opener": "Unreal came up in 8 of 63 AI answers this week (13%), but in none for \u201cWhat is the best low-sugar chocolate bar,\u201d where ChocZero, Hu and Lily's were named instead.",
+   "intro": "Right now Unreal is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Unreal in only 8 of 63 answers to candy and chocolate questions (13%). When asked \u201cWhat is the best low-sugar chocolate bar?\u201d none of them mentioned Unreal; they recommended ChocZero, Hu and Lily's instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -1241,11 +1241,11 @@
      "question": "What are the best gluten-free chips?",
      "winners": [
       [
-       "Siete",
+       "Kettle Brand",
        9
       ],
       [
-       "Kettle Brand",
+       "Siete",
        9
       ],
       [
@@ -1266,8 +1266,8 @@
     "title": "VP, Doritos and Cheetos",
     "linkedin": "https://www.linkedin.com/in/kyle-gore-a3b8ba1/"
    },
-   "opener": "Cheetos came up in 15 of 63 AI answers this week (24%), but in none for \u201cWhat are the best gluten-free chips,\u201d where Siete, Kettle Brand and Lay's were named instead.",
-   "intro": "Right now Cheetos is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cheetos in only 15 of 63 answers to chip-buying questions (24%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Cheetos; they recommended Siete, Kettle Brand and Lay's instead.",
+   "opener": "Cheetos came up in 15 of 63 AI answers this week (24%), but in none for \u201cWhat are the best gluten-free chips,\u201d where Kettle Brand, Siete and Lay's were named instead.",
+   "intro": "Right now Cheetos is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cheetos in only 15 of 63 answers to chip-buying questions (24%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Cheetos; they recommended Kettle Brand, Siete and Lay's instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -1328,11 +1328,11 @@
      "question": "What are the best gluten-free chips?",
      "winners": [
       [
-       "Siete",
+       "Kettle Brand",
        9
       ],
       [
-       "Kettle Brand",
+       "Siete",
        9
       ],
       [
@@ -1353,8 +1353,8 @@
     "title": "Brand Manager, Takis",
     "linkedin": "https://www.linkedin.com/in/trevor-moore-6a51b594/"
    },
-   "opener": "Takis came up in 11 of 63 AI answers this week (18%), but in none for \u201cWhat are the best gluten-free chips,\u201d where Siete, Kettle Brand and Lay's were named instead.",
-   "intro": "Right now Takis is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Takis in only 11 of 63 answers to chip-buying questions (18%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Takis; they recommended Siete, Kettle Brand and Lay's instead.",
+   "opener": "Takis came up in 11 of 63 AI answers this week (18%), but in none for \u201cWhat are the best gluten-free chips,\u201d where Kettle Brand, Siete and Lay's were named instead.",
+   "intro": "Right now Takis is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Takis in only 11 of 63 answers to chip-buying questions (18%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Takis; they recommended Kettle Brand, Siete and Lay's instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -1415,15 +1415,15 @@
      "question": "What are the best better-for-you snack brands?",
      "winners": [
       [
+       "Chomps",
+       6
+      ],
+      [
        "Hippeas",
        6
       ],
       [
        "LesserEvil",
-       6
-      ],
-      [
-       "Chomps",
        6
       ],
       [
@@ -1440,8 +1440,8 @@
     "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
     "linkedin": "https://www.linkedin.com/in/samantha-siegal/"
    },
-   "opener": "Lily's came up in 11 of 63 AI answers this week (18%), but in none for \u201cWhat are the best better-for-you snack brands,\u201d where Hippeas, LesserEvil and Chomps were named instead.",
-   "intro": "Right now Lily's is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Lily's in only 11 of 63 answers to candy and chocolate questions (18%). When asked \u201cWhat are the best better-for-you snack brands?\u201d none of them mentioned Lily's; they recommended Hippeas, LesserEvil and Chomps instead.",
+   "opener": "Lily's came up in 11 of 63 AI answers this week (18%), but in none for \u201cWhat are the best better-for-you snack brands,\u201d where Chomps, Hippeas and LesserEvil were named instead.",
+   "intro": "Right now Lily's is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Lily's in only 11 of 63 answers to candy and chocolate questions (18%). When asked \u201cWhat are the best better-for-you snack brands?\u201d none of them mentioned Lily's; they recommended Chomps, Hippeas and LesserEvil instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -1571,15 +1571,15 @@
        4
       ],
       [
+       "Cheez-It",
+       3
+      ],
+      [
        "Harvest Snaps",
        3
       ],
       [
        "Hippeas",
-       3
-      ],
-      [
-       "Late July",
        3
       ]
      ]
@@ -1592,8 +1592,8 @@
     "title": "Marketing Director, Doritos",
     "linkedin": "https://www.linkedin.com/in/kelsey-werner-41539480/"
    },
-   "opener": "Doritos came up in 24 of 63 AI answers this week (38%), but in none for \u201cWhat are the best chips for kids' lunches,\u201d where LesserEvil, Harvest Snaps and Hippeas were named instead.",
-   "intro": "Doritos shows up in 24 of 63 AI answers to chip-buying questions (38%) across ChatGPT, Gemini and Perplexity this week, but was never the first brand recommended. When asked \u201cWhat are the best chips for kids' lunches?\u201d none of them mentioned Doritos; they recommended LesserEvil, Harvest Snaps and Hippeas instead.",
+   "opener": "Doritos came up in 24 of 63 AI answers this week (38%), but in none for \u201cWhat are the best chips for kids' lunches,\u201d where LesserEvil, Cheez-It and Harvest Snaps were named instead.",
+   "intro": "Doritos shows up in 24 of 63 AI answers to chip-buying questions (38%) across ChatGPT, Gemini and Perplexity this week, but was never the first brand recommended. When asked \u201cWhat are the best chips for kids' lunches?\u201d none of them mentioned Doritos; they recommended LesserEvil, Cheez-It and Harvest Snaps instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -1719,19 +1719,19 @@
      "question": "What are the best healthy chips?",
      "winners": [
       [
-       "Siete",
-       7
-      ],
-      [
        "Jackson's",
        7
       ],
       [
-       "Hippeas",
-       5
+       "Siete",
+       7
       ],
       [
        "Beanitos",
+       5
+      ],
+      [
+       "Hippeas",
        5
       ]
      ]
@@ -1744,8 +1744,8 @@
     "title": "VP, Lay's, Global Foods Group",
     "linkedin": "https://www.linkedin.com/in/alexis-porter-1464724/"
    },
-   "opener": "Lay's came up in 16 of 63 AI answers this week (25%), but in none for \u201cWhat are the best healthy chips,\u201d where Siete, Jackson's and Hippeas were named instead.",
-   "intro": "Lay's shows up in 16 of 63 AI answers to chip-buying questions (25%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 2 times. When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Lay's; they recommended Siete, Jackson's and Hippeas instead.",
+   "opener": "Lay's came up in 16 of 63 AI answers this week (25%), but in none for \u201cWhat are the best healthy chips,\u201d where Jackson's, Siete and Beanitos were named instead.",
+   "intro": "Lay's shows up in 16 of 63 AI answers to chip-buying questions (25%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 2 times. When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Lay's; they recommended Jackson's, Siete and Beanitos instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -1936,15 +1936,15 @@
      "question": "What are the best spicy chips?",
      "winners": [
       [
-       "Takis",
-       9
-      ],
-      [
        "Doritos",
        9
       ],
       [
        "Kettle Brand",
+       9
+      ],
+      [
+       "Takis",
        9
       ],
       [
@@ -1961,8 +1961,8 @@
     "title": "Director of Brand Strategy",
     "linkedin": "https://www.linkedin.com/in/jamie-chodnicki-237953126/"
    },
-   "opener": "Siete came up in 23 of 63 AI answers this week (36%), but in none for \u201cWhat are the best spicy chips,\u201d where Takis, Doritos and Kettle Brand were named instead.",
-   "intro": "Siete shows up in 23 of 63 AI answers to chip-buying questions (36%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 3 times. When asked \u201cWhat are the best spicy chips?\u201d none of them mentioned Siete; they recommended Takis, Doritos and Kettle Brand instead.",
+   "opener": "Siete came up in 23 of 63 AI answers this week (36%), but in none for \u201cWhat are the best spicy chips,\u201d where Doritos, Kettle Brand and Takis were named instead.",
+   "intro": "Siete shows up in 23 of 63 AI answers to chip-buying questions (36%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 3 times. When asked \u201cWhat are the best spicy chips?\u201d none of them mentioned Siete; they recommended Doritos, Kettle Brand and Takis instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -2023,15 +2023,15 @@
      "question": "What are the best better-for-you snack brands?",
      "winners": [
       [
+       "Chomps",
+       6
+      ],
+      [
        "Hippeas",
        6
       ],
       [
        "LesserEvil",
-       6
-      ],
-      [
-       "Chomps",
        6
       ],
       [
@@ -2048,8 +2048,8 @@
     "title": "Senior Brand Manager, Kettle Brand",
     "linkedin": "https://www.linkedin.com/in/mattventurella/"
    },
-   "opener": "Kettle Brand came up in 25 of 63 AI answers this week (40%), but in none for \u201cWhat are the best better-for-you snack brands,\u201d where Hippeas, LesserEvil and Chomps were named instead.",
-   "intro": "Kettle Brand shows up in 25 of 63 AI answers to chip-buying questions (40%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 7 times. When asked \u201cWhat are the best better-for-you snack brands?\u201d none of them mentioned Kettle Brand; they recommended Hippeas, LesserEvil and Chomps instead.",
+   "opener": "Kettle Brand came up in 25 of 63 AI answers this week (40%), but in none for \u201cWhat are the best better-for-you snack brands,\u201d where Chomps, Hippeas and LesserEvil were named instead.",
+   "intro": "Kettle Brand shows up in 25 of 63 AI answers to chip-buying questions (40%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 7 times. When asked \u201cWhat are the best better-for-you snack brands?\u201d none of them mentioned Kettle Brand; they recommended Chomps, Hippeas and LesserEvil instead.",
    "series": [
     {
      "date": "2026-11-25",
@@ -2146,7 +2146,7 @@
    "mentions": 1,
    "possible": 63,
    "opportunity": 94,
-   "intro": "Right now Hershey's is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named Hershey's in only 1 of 63 answers to candy and chocolate questions (2%). When asked \u201cWhat is the best candy bar?\u201d none of them mentioned Hershey's; they recommended Snickers, Kit Kat and Twix instead."
+   "intro": "Right now Hershey's is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named Hershey's in only 1 of 63 answers to candy and chocolate questions (2%). When asked \u201cWhat is the best candy bar?\u201d none of them mentioned Hershey's; they recommended Kit Kat, Snickers and Reese's instead."
   },
   {
    "company": "The Campbell's Company",
@@ -2162,7 +2162,7 @@
    "mentions": 13,
    "possible": 63,
    "opportunity": 81,
-   "intro": "Right now Cape Cod is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cape Cod in only 13 of 63 answers to chip-buying questions (21%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Cape Cod; they recommended Siete, Jackson's and Hippeas instead."
+   "intro": "Right now Cape Cod is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cape Cod in only 13 of 63 answers to chip-buying questions (21%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Cape Cod; they recommended Jackson's, Siete and Beanitos instead."
   },
   {
    "company": "The Hershey Company",
@@ -2178,7 +2178,7 @@
    "mentions": 1,
    "possible": 63,
    "opportunity": 79,
-   "intro": "Right now SkinnyPop is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named SkinnyPop in only 1 of 63 answers to chip-buying questions (2%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned SkinnyPop; they recommended Siete, Jackson's and Hippeas instead."
+   "intro": "Right now SkinnyPop is barely showing up in AI search. This week ChatGPT, Gemini and Perplexity named SkinnyPop in only 1 of 63 answers to chip-buying questions (2%). When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned SkinnyPop; they recommended Jackson's, Siete and Beanitos instead."
   },
   {
    "company": "Mars (Kellanova)",
@@ -2244,7 +2244,7 @@
    "mentions": 8,
    "possible": 63,
    "opportunity": 71,
-   "intro": "Right now Unreal is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Unreal in only 8 of 63 answers to candy and chocolate questions (13%). When asked \u201cWhat is the best low-sugar chocolate bar?\u201d none of them mentioned Unreal; they recommended ChocZero, Lindt and Lily's instead."
+   "intro": "Right now Unreal is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Unreal in only 8 of 63 answers to candy and chocolate questions (13%). When asked \u201cWhat is the best low-sugar chocolate bar?\u201d none of them mentioned Unreal; they recommended ChocZero, Hu and Lily's instead."
   },
   {
    "company": "Unreal Snacks",
@@ -2260,7 +2260,7 @@
    "mentions": 8,
    "possible": 63,
    "opportunity": 71,
-   "intro": "Right now Unreal is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Unreal in only 8 of 63 answers to candy and chocolate questions (13%). When asked \u201cWhat is the best low-sugar chocolate bar?\u201d none of them mentioned Unreal; they recommended ChocZero, Lindt and Lily's instead."
+   "intro": "Right now Unreal is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Unreal in only 8 of 63 answers to candy and chocolate questions (13%). When asked \u201cWhat is the best low-sugar chocolate bar?\u201d none of them mentioned Unreal; they recommended ChocZero, Hu and Lily's instead."
   },
   {
    "company": "PepsiCo",
@@ -2277,7 +2277,7 @@
    "mentions": 15,
    "possible": 63,
    "opportunity": 68,
-   "intro": "Right now Cheetos is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cheetos in only 15 of 63 answers to chip-buying questions (24%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Cheetos; they recommended Siete, Kettle Brand and Lay's instead."
+   "intro": "Right now Cheetos is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Cheetos in only 15 of 63 answers to chip-buying questions (24%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Cheetos; they recommended Kettle Brand, Siete and Lay's instead."
   },
   {
    "company": "Barcel USA (Grupo Bimbo)",
@@ -2293,7 +2293,7 @@
    "mentions": 11,
    "possible": 63,
    "opportunity": 63,
-   "intro": "Right now Takis is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Takis in only 11 of 63 answers to chip-buying questions (18%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Takis; they recommended Siete, Kettle Brand and Lay's instead."
+   "intro": "Right now Takis is missing from most AI answers in its category. This week ChatGPT, Gemini and Perplexity named Takis in only 11 of 63 answers to chip-buying questions (18%). When asked \u201cWhat are the best gluten-free chips?\u201d none of them mentioned Takis; they recommended Kettle Brand, Siete and Lay's instead."
   },
   {
    "company": "PepsiCo",
@@ -2309,7 +2309,7 @@
    "mentions": 24,
    "possible": 63,
    "opportunity": 58,
-   "intro": "Doritos shows up in 24 of 63 AI answers to chip-buying questions (38%) across ChatGPT, Gemini and Perplexity this week, but was never the first brand recommended. When asked \u201cWhat are the best chips for kids' lunches?\u201d none of them mentioned Doritos; they recommended LesserEvil, Harvest Snaps and Hippeas instead."
+   "intro": "Doritos shows up in 24 of 63 AI answers to chip-buying questions (38%) across ChatGPT, Gemini and Perplexity this week, but was never the first brand recommended. When asked \u201cWhat are the best chips for kids' lunches?\u201d none of them mentioned Doritos; they recommended LesserEvil, Cheez-It and Harvest Snaps instead."
   },
   {
    "company": "LesserEvil (Hershey)",
@@ -2341,7 +2341,7 @@
    "mentions": 16,
    "possible": 63,
    "opportunity": 57,
-   "intro": "Lay's shows up in 16 of 63 AI answers to chip-buying questions (25%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 2 times. When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Lay's; they recommended Siete, Jackson's and Hippeas instead."
+   "intro": "Lay's shows up in 16 of 63 AI answers to chip-buying questions (25%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 2 times. When asked \u201cWhat are the best healthy chips?\u201d none of them mentioned Lay's; they recommended Jackson's, Siete and Beanitos instead."
   },
   {
    "company": "Tony's Chocolonely",
@@ -2389,7 +2389,7 @@
    "mentions": 23,
    "possible": 63,
    "opportunity": 49,
-   "intro": "Siete shows up in 23 of 63 AI answers to chip-buying questions (36%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 3 times. When asked \u201cWhat are the best spicy chips?\u201d none of them mentioned Siete; they recommended Takis, Doritos and Kettle Brand instead."
+   "intro": "Siete shows up in 23 of 63 AI answers to chip-buying questions (36%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 3 times. When asked \u201cWhat are the best spicy chips?\u201d none of them mentioned Siete; they recommended Doritos, Kettle Brand and Takis instead."
   },
   {
    "company": "The Campbell's Company",
@@ -2405,7 +2405,7 @@
    "mentions": 25,
    "possible": 63,
    "opportunity": 47,
-   "intro": "Kettle Brand shows up in 25 of 63 AI answers to chip-buying questions (40%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 7 times. When asked \u201cWhat are the best better-for-you snack brands?\u201d none of them mentioned Kettle Brand; they recommended Hippeas, LesserEvil and Chomps instead."
+   "intro": "Kettle Brand shows up in 25 of 63 AI answers to chip-buying questions (40%) across ChatGPT, Gemini and Perplexity this week, and was the first brand recommended 7 times. When asked \u201cWhat are the best better-for-you snack brands?\u201d none of them mentioned Kettle Brand; they recommended Chomps, Hippeas and LesserEvil instead."
   },
   {
    "company": "Mondelez",

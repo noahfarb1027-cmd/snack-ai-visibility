@@ -65,7 +65,7 @@ def week_stats(answers, questions, tracked):
         qa = [a for a in answers if a["question_id"] == q["id"]]
         for a in qa:
             c.update(set(a["brands"]))
-        winners[q["id"]] = {"answers": len(qa), "top": c.most_common(6)}
+        winners[q["id"]] = {"answers": len(qa), "top": sorted(c.items(), key=lambda kv: (-kv[1], kv[0]))[:6]}  # stable order for ties
     return out, winners
 
 
