@@ -41,7 +41,8 @@ def week_stats(answers, questions, tracked):
     qmap = {q["id"]: q for q in questions}
     out = {}
     for brand, info in tracked.items():
-        rel = [a for a in answers if relevant(qmap[a["question_id"]], info["group"])]
+        fit = info.get("fit") or [q["id"] for q in questions if relevant(q, info["group"])]
+        rel = [a for a in answers if a["question_id"] in fit]  # only the questions this brand competes in
         named = [a for a in rel if brand in a["brands"]]
         by_engine = {}
         for e in ENGINES:
@@ -249,6 +250,9 @@ def main():
         args = ob.pop("_intro_args")
         ob["fit_stats"] = fit_stats(args[2], args[5])
         ob["intro"] = intro(*args, v=i)
+        ob["opener"] = ob["intro"]
+        ob["fit_questions"] = [{"id": q, "text": qmap[q]["text"], **args[2]["by_q"].get(q, {"m": 0, "n": 0})}
+                               for q in args[5] if q in qmap]
 
     # Outreach tab: every contact, with the intro for the weakest brand they cover
     by_name = {b["brand"]: b for b in out_brands}

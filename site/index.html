@@ -109,7 +109,7 @@ body:not([data-view=outreach]) .out{display:none}
     <button aria-pressed="true" data-g="all">All 20</button><button aria-pressed="false" data-g="chips">Chips</button><button aria-pressed="false" data-g="candy">Candy and chocolate</button>
   </div>
   <div class="scroll"><table class="stack" id="leads">
-    <thead><tr><th>#</th><th>Brand</th><th>Who to talk to</th><th>Share</th><th>Biggest gap</th><th>Opening line</th></tr></thead>
+    <thead><tr><th>#</th><th>Brand</th><th>Who to talk to</th><th>Share of its questions</th><th>Biggest gap</th><th>Opening line</th></tr></thead>
     <tbody></tbody>
   </table></div>
 </div></section>
@@ -117,7 +117,7 @@ body:not([data-view=outreach]) .out{display:none}
 <section class="band dash" style="padding-top:0"><div class="wrap">
   <h2>Who wins each question</h2>
   <div class="scroll"><table class="stack" id="qtab">
-    <thead><tr><th>Buyer question</th><th>Most-named brands this week (answers)</th></tr></thead>
+    <thead><tr><th>Buyer question</th><th>Most-named brands this week (answers)</th><th>Tracked brands measured on it</th></tr></thead>
     <tbody></tbody>
   </table></div>
   <details><summary>How this works</summary>
@@ -161,8 +161,8 @@ function boot(data){
     movers?[(movers.change>0?'+':'')+Math.round(movers.change*100)+' pts',`biggest move: ${movers.brand}`]:[String(D.weeks.length),`week${D.weeks.length>1?'s':''} tracked so far`]
   ];
   document.getElementById('read').innerHTML=reads.map(r=>`<div><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join('');
-  document.getElementById('legend').innerHTML='<span>Bar: share of relevant answers naming the brand (all engines)</span>'+Object.entries(ENG).filter(([k])=>D.engines.includes(k)).map(([,v])=>`<span><i style="background:${v.c}"></i>${v.n}</span>`).join('');
-  document.getElementById('method').textContent=`Each Monday a script asks ChatGPT, Gemini and Perplexity the same 12 snack-buying questions several times and records which brands every answer names. A brand's share is the answers that name it divided by the answers to questions in its category (chips, candy, or both). "First pick" is the first brand an answer names. This week's data: ${D.source_this_week}. Contacts are public profile details (name, title, LinkedIn) for each brand's marketing lead; no outreach has been sent from this page, and email addresses are not published here.`;
+  document.getElementById('legend').innerHTML='<span>Bar: share of answers naming the brand, counting only the questions it competes in (click a brand to see them)</span>'+Object.entries(ENG).filter(([k])=>D.engines.includes(k)).map(([,v])=>`<span><i style="background:${v.c}"></i>${v.n}</span>`).join('');
+  document.getElementById('method').textContent=`Each Monday a script asks ChatGPT, Gemini and Perplexity the same 12 snack-buying questions several times and records which brands every answer names. A brand's share counts only the questions it competes in (for example, Twix is measured on the best and healthiest candy bar questions, never on chips); the dashboard lists those questions for every brand. "First pick" is the first brand an answer names. This week's data: ${D.source_this_week}. Contacts are public profile details (name, title, LinkedIn) for each brand's marketing lead; no outreach has been sent from this page, and email addresses are not published here.`;
   scale();qtable();leads();outreach();focus(sel);
   document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;group=b.dataset.g;for(const x of document.querySelectorAll('#chips button'))x.setAttribute('aria-pressed',x===b);leads()});
 }
@@ -171,17 +171,20 @@ function scale(){
   const rows=[...D.brands].sort((a,b)=>b.share-a.share);
   document.getElementById('scale').innerHTML=rows.map(b=>{
     const ticks=Object.entries(b.by_engine).map(([e,v])=>ENG[e]?`<span class="tick" style="left:${v*100}%;background:${ENG[e].c}" title="${esc(ENG[e].n)}: ${pct(v)}"></span>`:'').join('');
-    return `<div class="row" data-b="${esc(b.brand)}" tabindex="0" role="button" aria-label="${esc(b.brand)} ${pct(b.share)}"><span class="nm">${esc(b.brand)} <small>${b.group==='chips'?'chips':'candy'}</small></span><div class="trk"><div class="fill" style="width:${b.share*100}%"></div>${ticks}</div><span class="pc">${pct(b.share)}</span></div>`}).join('');
+    return `<div class="row" data-b="${esc(b.brand)}" title="${esc((b.fit_questions||[]).map(q=>q.text).join(' \u00b7 '))}" tabindex="0" role="button" aria-label="${esc(b.brand)} ${pct(b.share)}"><span class="nm">${esc(b.brand)} <small>${b.group==='chips'?'chips':'candy'}</small></span><div class="trk"><div class="fill" style="width:${b.share*100}%"></div>${ticks}</div><span class="pc">${pct(b.share)}</span></div>`}).join('');
   for(const r of document.querySelectorAll('.row')){r.addEventListener('click',()=>focus(r.dataset.b));r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focus(r.dataset.b)}})}
 }
 
 function focus(name){
   sel=name;const b=D.brands.find(x=>x.brand===name);
   for(const r of document.querySelectorAll('.row'))r.classList.toggle('on',r.dataset.b===name);
-  document.getElementById('trend-title').textContent=`${b.brand}: ${pct(b.share)} of relevant answers`;
+  document.getElementById('trend-title').textContent=`${b.brand}: named in ${b.mentions} of ${b.possible} answers (${pct(b.share)})`;
   document.getElementById('trend-sub').textContent=D.weeks.length>1?`Weekly share since ${fmtDate(D.weeks[0])}, overall and by engine`:`One week so far; the line grows every Monday`;
-  document.getElementById('gap-title').textContent=b.gaps.length?`Where ${b.brand} is missing`:`${b.brand} shows up in every question it fits`;
-  document.getElementById('gaps').innerHTML=b.gaps.length?b.gaps.slice(0,4).map(g=>`<div><b>${esc(g.question)}</b><p>Named instead: ${g.winners.slice(0,4).map(w=>`${esc(w[0])} (${w[1]})`).join(', ')}</p></div>`).join(''):`<p>${esc(b.opener)}</p>`;
+  document.getElementById('gap-title').textContent=`The questions ${b.brand} is measured on`;
+  const gapBy=Object.fromEntries(b.gaps.map(g=>[g.question,g]));
+  document.getElementById('gaps').innerHTML=(b.fit_questions||[]).map(q=>{const g=gapBy[q.text];const share=q.n?q.m/q.n:0;return `<div><b>${esc(q.text)}</b>
+    <div class="row" style="cursor:default;padding:4px 0;grid-template-columns:minmax(0,1fr) 5.5em"><div class="trk"><div class="fill" style="width:${share*100}%"></div></div><span class="pc">${q.m} of ${q.n}</span></div>
+    ${g?`<p>Named instead: ${g.winners.slice(0,4).map(w=>`${esc(w[0])} (${w[1]})`).join(', ')}</p>`:''}</div>`}).join('')||`<p>${esc(b.opener)}</p>`;
   drawTrend();
 }
 
@@ -207,7 +210,7 @@ function leads(){
   const rows=D.brands.filter(b=>group==='all'||b.group===group);
   document.querySelector('#leads tbody').innerHTML=rows.map((b,i)=>{
     const L=b.lead||{};const g=b.gaps[0];
-    return `<tr><td class="rk">${i+1}</td><td><b>${esc(b.brand)}</b><small style="display:block;color:var(--quiet);font-size:13px">${esc(L.company||'')}</small></td>
+    return `<tr><td class="rk">${i+1}</td><td><b>${esc(b.brand)}</b><small style="display:block;color:var(--quiet);font-size:13px">${esc(L.company||'')}</small><small style="display:block;color:var(--quiet);font-size:13px">Measured on ${esc((b.fit_stats||{}).label||'')}</small></td>
       <td class="who">${L.name?`<a href="${esc(L.linkedin)}" target="_blank" rel="noopener">${esc(L.name)}</a><small>${esc(L.title)}</small>`:'<small>No contact yet</small>'}</td>
       <td class="n">${pct(b.share)}<small style="display:block;color:var(--quiet);font-size:13px">${b.mentions}/${b.possible}${b.change!=null?` · ${b.change>=0?'+':''}${Math.round(b.change*100)} pts`:''}</small></td>
       <td class="gap">${g?esc(g.question):'None this week'}${g?`<small>Won by ${esc(g.winners.slice(0,2).map(w=>w[0]).join(', '))}</small>`:''}</td>
@@ -216,7 +219,7 @@ function leads(){
 }
 
 function qtable(){
-  document.querySelector('#qtab tbody').innerHTML=D.questions.map(q=>`<tr><td>${esc(q.text)}</td><td>${q.top.length?q.top.slice(0,5).map(w=>`${esc(w[0])} (${w[1]})`).join(', '):'No brands named'} <small style="color:var(--quiet)">of ${q.answers}</small></td></tr>`).join('');
+  document.querySelector('#qtab tbody').innerHTML=D.questions.map(q=>`<tr><td>${esc(q.text)}</td><td>${q.top.length?q.top.slice(0,5).map(w=>`${esc(w[0])} (${w[1]})`).join(', '):'No brands named'} <small style="color:var(--quiet)">of ${q.answers}</small></td><td>${esc(D.brands.filter(b=>(b.fit_questions||[]).some(f=>f.id===q.id)).map(b=>b.brand).join(', ')||'None (context only)')}</td></tr>`).join('');
 }
 
 function outreach(){
@@ -227,7 +230,7 @@ function outreach(){
     <td class="rk">${i+1}</td>
     <td class="who"><a href="${esc(r.linkedin)}" target="_blank" rel="noopener">${esc(r.name)}</a><small>${esc(r.title)}</small><small>${esc(r.company)}</small></td>
     <td><b>${esc(r.focus)}</b>${r.brands.length>1?`<small style="display:block;color:var(--quiet);font-size:13px">also ${esc(r.brands.filter(b=>b!==r.focus).join(', '))}</small>`:''}</td>
-    <td class="n">${pct(r.share)}<small style="display:block;color:var(--quiet);font-size:13px">${r.mentions}/${r.possible}</small></td>
+    <td class="n">${pct(r.share)}<small style="display:block;color:var(--quiet);font-size:13px">${r.mentions}/${r.possible}</small><small style="display:block;color:var(--quiet);font-size:13px;white-space:normal;text-align:left">${esc(r.category||'')}</small></td>
     <td class="intro">${esc(r.intro)}<br><button class="cp" data-o="${i}">Copy line</button></td>
     <td>${r.email_masked?`<span style="white-space:nowrap;font-size:14px">${esc(r.email_masked)}</span><br>`:""}<span class="st ${s[0]}">${s[1]}</span></td></tr>`}).join('');
   for(const c of document.querySelectorAll('#otab .cp'))c.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(rows[+c.dataset.o].intro);c.textContent='Copied'}catch(e){c.textContent='Select the text to copy'}setTimeout(()=>c.textContent='Copy line',1800)});
