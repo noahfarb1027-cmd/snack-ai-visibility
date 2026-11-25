@@ -37,7 +37,7 @@ def ask_openai(q):
         r = requests.post(
             "https://api.openai.com/v1/responses",
             headers={"Authorization": f"Bearer {key}"},
-            json={"model": model, "input": q, "tools": [{"type": tool}]},
+            json={"model": model, "input": q, "tools": [{"type": tool}], "tool_choice": "required"},  # search every time, like the ChatGPT app does for shopping questions
             timeout=TIMEOUT,
         )
         if r.status_code == 400 and tool == "web_search":
@@ -68,15 +68,24 @@ def ask_gemini(q):
 
 def ask_perplexity(q):
     key = os.environ["PERPLEXITY_API_KEY"].strip()  # pasted keys often carry a stray space or newline
-    model = os.getenv("PERPLEXITY_MODEL") or "sonar"
-    r = requests.post(
-        "https://api.perplexity.ai/chat/completions",
-        headers={"Authorization": f"Bearer {key}"},
-        json={"model": model, "messages": [{"role": "user", "content": q}]},
-        timeout=TIMEOUT,
-    )
-    r.raise_for_status()
-    return r.json()["choices"][0]["message"]["content"]
+    effort = os.getenv("PERPLEXITY_EFFORT") or "fast"  # "fast" is what the old Sonar model maps to
+    headers = {"Authorization": f"Bearer {key}"}
+    body = {"input": q, "effort": effort}
+    # Perplexity replaced Sonar's chat/completions with its Agent API; try both paths it has documented
+    for url in ("https://api.perplexity.ai/v1/agent", "https://api.perplexity.ai/v1/responses"):
+        r = requests.post(url, headers=headers, json=body, timeout=TIMEOUT)
+        if r.status_code == 404 and url.endswith("/agent"):
+            continue
+        r.raise_for_status()
+        data = r.json()
+        if data.get("output_text"):
+            return data["output_text"]
+        out = []
+        for item in data.get("output", []):
+            if item.get("type") == "message":
+                out += [c.get("text", "") for c in item.get("content", []) if c.get("type") == "output_text"]
+        return "\n".join(out)
+    raise RuntimeError("Perplexity Agent API unavailable")
 
 
 def ask_mock(q, engine, brands):

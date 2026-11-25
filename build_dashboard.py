@@ -24,6 +24,12 @@ def load():
             if line.strip():
                 r = json.loads(line)
                 weeks[r["date"]].append(r)
+    # The 25 Nov browser baseline used a different method (consumer apps by hand). If the API also
+    # ran that day, keep the API answers so every week on the chart is measured the same way.
+    for d, recs in weeks.items():
+        api = [r for r in recs if "source" not in r]
+        if api and len(api) < len(recs):
+            weeks[d] = api
     return dict(sorted(weeks.items()))
 
 

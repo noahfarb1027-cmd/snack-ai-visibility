@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "0 11 * * 1"   # Mondays 11:00 UTC (6am Eastern in winter, 7am in summer)
   workflow_dispatch:        # lets you run it by hand from the Actions tab
+    inputs:
+      test:
+        description: "Test only: ask each question once, save and publish nothing"
+        type: boolean
+        default: false
 
 permissions:
   contents: write           # so the job can commit results back to the repo
@@ -37,12 +42,14 @@ jobs:
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
-        run: python tracker.py --runs 3
+        run: python tracker.py --runs ${{ inputs.test && 1 || 3 }}
 
       - name: Rebuild dashboard data
+        if: ${{ !inputs.test }}
         run: python build_dashboard.py
 
       - name: Commit results
+        if: ${{ !inputs.test }}
         run: |
           git config user.name "aeo-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -51,8 +58,11 @@ jobs:
           git push
 
       - uses: actions/configure-pages@v5
+        if: ${{ !inputs.test }}
       - uses: actions/upload-pages-artifact@v3
+        if: ${{ !inputs.test }}
         with:
           path: site
       - id: deploy
+        if: ${{ !inputs.test }}
         uses: actions/deploy-pages@v4
