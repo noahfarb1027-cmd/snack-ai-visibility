@@ -5,7 +5,7 @@
    "group": "chips",
    "pattern": "\\blay[’']?s\\b",
    "fit": [
-    "healthy_chips",
+    "party_chips",
     "kids_chips",
     "spicy_chips"
    ]
@@ -14,9 +14,9 @@
    "group": "chips",
    "pattern": "doritos",
    "fit": [
-    "kids_chips",
     "party_chips",
-    "spicy_chips"
+    "spicy_chips",
+    "kids_chips"
    ]
   },
   "Pringles": {
@@ -24,52 +24,51 @@
    "pattern": "pringles",
    "fit": [
     "party_chips",
-    "kids_chips",
-    "gf_chips"
+    "kids_chips"
    ]
   },
   "Cheetos": {
    "group": "chips",
    "pattern": "cheetos",
    "fit": [
-    "gf_chips",
-    "kids_chips",
-    "party_chips"
+    "party_chips",
+    "spicy_chips",
+    "kids_chips"
    ]
   },
   "Takis": {
    "group": "chips",
    "pattern": "\\btakis\\b",
    "fit": [
-    "party_chips",
-    "gf_chips"
+    "spicy_chips",
+    "party_chips"
    ]
   },
   "Kettle Brand": {
    "group": "chips",
    "pattern": "kettle brand",
    "fit": [
-    "healthy_chips",
-    "kids_chips",
-    "bfy_brands"
+    "party_chips",
+    "gf_chips",
+    "healthy_chips"
    ]
   },
   "Cape Cod": {
    "group": "chips",
    "pattern": "cape cod",
    "fit": [
-    "healthy_chips",
-    "kids_chips",
-    "bfy_brands"
+    "party_chips",
+    "gf_chips",
+    "healthy_chips"
    ]
   },
   "Siete": {
    "group": "chips",
    "pattern": "\\bsiete\\b",
    "fit": [
-    "spicy_chips",
+    "gf_chips",
     "healthy_chips",
-    "kids_chips"
+    "spicy_chips"
    ]
   },
   "SkinnyPop": {
@@ -127,7 +126,6 @@
    "pattern": "hershey",
    "fit": [
     "best_candy",
-    "healthy_candy",
     "lowsugar_choc"
    ]
   },

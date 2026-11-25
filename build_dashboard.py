@@ -52,7 +52,8 @@ def week_stats(answers, questions, tracked):
         for q in questions:
             if relevant(q, info["group"]):
                 qa = [a for a in answers if a["question_id"] == q["id"]]
-                by_q[q["id"]] = {"m": sum(brand in a["brands"] for a in qa), "n": len(qa)}
+                by_q[q["id"]] = {"m": sum(brand in a["brands"] for a in qa), "n": len(qa),
+                                 "f": sum(a["brands"][:1] == [brand] for a in qa)}
         out[brand] = {
             "mentions": len(named), "possible": len(rel),
             "share": round(len(named) / len(rel), 3) if rel else 0,
@@ -112,6 +113,26 @@ for parent, names in {
     for n in names:
         OWNER[n] = parent
 
+TOPIC = {
+    "healthy_chips": "healthy chips", "party_chips": "party chips", "gf_chips": "gluten-free chips",
+    "spicy_chips": "spicy chips", "kids_chips": "chips for kids' lunches", "best_candy": "the best candy bar",
+    "healthy_candy": "the healthiest candy bar", "lowsugar_choc": "low-sugar chocolate",
+    "vegan_choc": "vegan chocolate", "ethical_choc": "ethical chocolate",
+    "bfy_brands": "better-for-you snack brands", "road_trip": "road-trip snacks",
+}
+
+
+def fit_stats(s, fit):
+    """Mentions counted only on the questions this brand actually competes in."""
+    qs = [q for q in fit if q in s["by_q"] and s["by_q"][q]["n"]]
+    m = sum(s["by_q"][q]["m"] for q in qs)
+    n = sum(s["by_q"][q]["n"] for q in qs)
+    f = sum(s["by_q"][q].get("f", 0) for q in qs)
+    topics = [TOPIC.get(q, q) for q in qs]
+    label = topics[0] if len(topics) == 1 else ", ".join(topics[:-1]) + " and " + topics[-1]
+    return {"m": m, "n": n, "share": round(m / n, 3) if n else 0, "first": f, "label": label, "count": len(qs)}
+
+
 CATEGORY = {"chips": "chip-buying", "candy": "candy and chocolate"}
 ENGINE_LIST = "ChatGPT, Gemini and Perplexity"
 
@@ -119,34 +140,41 @@ ENGINE_LIST = "ChatGPT, Gemini and Perplexity"
 def intro(brand, info, s, gaps, qmap, fit, v=0):
     """One plain first line for an email: where the brand stands in AI answers, then the clearest miss.
     v picks the wording, so a list of these doesn't open the same way every time."""
-    cat = CATEGORY.get(info["group"], "snack")
-    about = "chips" if info["group"] == "chips" else "candy and chocolate"
-    b, m, n, pct = brand, s["mentions"], s["possible"], round(s["share"] * 100)
-    if s["share"] < 0.10:
-        leads = [
-            f"Right now {b} is barely showing up in AI search. This week {ENGINE_LIST} named {b} in only {m} of {n} answers to {cat} questions ({pct}%).",
-            f"{b} was named in just {m} of {n} AI answers to {cat} questions this week ({pct}%), across {ENGINE_LIST}.",
-            f"When shoppers ask ChatGPT, Gemini or Perplexity about {about}, {b} almost never comes up: {m} of {n} answers this week ({pct}%).",
-            f"Out of {n} answers {ENGINE_LIST} gave to {cat} questions this week, {b} appeared in {m} ({pct}%).",
+    fs = fit_stats(s, fit)
+    b, m, n, pct, about = brand, fs["m"], fs["n"], round(fs["share"] * 100), fs["label"]
+    if m == 0:
+        zero = [
+            f"Right now {b} is invisible in AI search for its own category. Asked about {about}, {ENGINE_LIST} didn't name {b} in any of {n} answers this week.",
+            f"{b} didn't appear in a single one of {n} AI answers about {about} this week, across {ENGINE_LIST}.",
+            f"When shoppers ask ChatGPT, Gemini or Perplexity about {about}, {b} doesn't come up: 0 of {n} answers this week.",
         ]
-    elif s["share"] < 0.25:
+    if m == 0:
+        leads = []
+    elif fs["share"] < 0.10:
         leads = [
-            f"Right now {b} is missing from most AI answers in its category. This week {ENGINE_LIST} named {b} in only {m} of {n} answers to {cat} questions ({pct}%).",
-            f"{b} is left out of most AI shopping answers: {ENGINE_LIST} named it in {m} of {n} {cat} answers this week ({pct}%).",
-            f"Out of {n} AI answers to {cat} questions this week, {b} came up in {m} ({pct}%).",
+            f"Right now {b} is barely showing up in AI search. When asked about {about}, {ENGINE_LIST} named {b} in only {m} of {n} answers this week ({pct}%).",
+            f"{b} was named in just {m} of {n} AI answers about {about} this week ({pct}%), across {ENGINE_LIST}.",
+            f"When shoppers ask ChatGPT, Gemini or Perplexity about {about}, {b} almost never comes up: {m} of {n} answers this week ({pct}%).",
+            f"Out of {n} answers {ENGINE_LIST} gave about {about} this week, {b} appeared in {m} ({pct}%).",
+        ]
+    elif fs["share"] < 0.40:
+        leads = [
+            f"Right now {b} is missing from most AI answers in its category. Asked about {about}, {ENGINE_LIST} named {b} in only {m} of {n} answers this week ({pct}%).",
+            f"{b} is left out of most AI shopping answers in its category: {ENGINE_LIST} named it in {m} of {n} answers about {about} this week ({pct}%).",
+            f"Out of {n} AI answers about {about} this week, {b} came up in {m} ({pct}%).",
             f"Most times an AI assistant answers a question about {about}, {b} isn't in the answer. This week it was named in {m} of {n} ({pct}%).",
         ]
     else:
-        first = (", but was never the first brand recommended." if s["first"] == 0 else
-                 f", and was the first brand recommended {s['first']} times.")
+        first = (", but was never the first brand recommended." if fs["first"] == 0 else
+                 f", and was the first brand recommended {fs['first']} times.")
         leads = [
-            f"{b} shows up in {m} of {n} AI answers to {cat} questions ({pct}%) across {ENGINE_LIST} this week" + first,
-            f"{b} is one of the more visible brands in AI answers about {about}, named in {m} of {n} this week ({pct}%)" + first,
-            f"{ENGINE_LIST} named {b} in {m} of {n} {cat} answers this week ({pct}%)."
-            + (" It was never the first brand recommended." if s["first"] == 0 else
-               f" It was the first brand recommended {s['first']} times."),
+            f"{b} shows up in {m} of {n} AI answers about {about} ({pct}%) across {ENGINE_LIST} this week" + first,
+            f"{b} is one of the more visible brands when people ask AI about {about}, named in {m} of {n} answers this week ({pct}%)" + first,
+            f"{ENGINE_LIST} named {b} in {m} of {n} answers about {about} this week ({pct}%)."
+            + (" It was never the first brand recommended." if fs["first"] == 0 else
+               f" It was the first brand recommended {fs['first']} times."),
         ]
-    lead = leads[v % len(leads)]
+    lead = (zero if m == 0 else leads)[v % len(zero if m == 0 else leads)]
     t = (v + 1)  # offset so the two halves of a line don't rotate together
     if gaps:
         g = gaps[0]
@@ -218,7 +246,9 @@ def main():
         })
     out_brands.sort(key=lambda b: -b["opportunity"])
     for i, ob in enumerate(out_brands):  # rank order, so neighbouring rows get different wording
-        ob["intro"] = intro(*ob.pop("_intro_args"), v=i)
+        args = ob.pop("_intro_args")
+        ob["fit_stats"] = fit_stats(args[2], args[5])
+        ob["intro"] = intro(*args, v=i)
 
     # Outreach tab: every contact, with the intro for the weakest brand they cover
     by_name = {b["brand"]: b for b in out_brands}
@@ -229,8 +259,9 @@ def main():
         if not covered:
             continue
         focus = max(covered, key=lambda b: b["opportunity"])
-        outreach.append({**p, "focus": focus["brand"], "share": focus["share"],
-                         "mentions": focus["mentions"], "possible": focus["possible"],
+        fs = focus["fit_stats"]
+        outreach.append({**p, "focus": focus["brand"], "share": fs["share"],
+                         "mentions": fs["m"], "possible": fs["n"], "category": fs["label"],
                          "opportunity": focus["opportunity"], "intro": focus["intro"]})
     outreach.sort(key=lambda p: -p["opportunity"])
 
