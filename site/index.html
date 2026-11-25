@@ -246,7 +246,7 @@ function route(){
 }
 window.addEventListener('hashchange',route);route();
 const inline=window.__DATA__;
-if(inline)boot(inline);else fetch('data.json').then(r=>r.json()).then(boot).catch(()=>{document.getElementById('title').textContent='Data not built yet: run build_dashboard.py'});
+if(inline)boot(inline);else fetch('data.json',{cache:'no-store'}).then(r=>r.json()).then(boot).catch(()=>{document.getElementById('title').textContent='Data not built yet: run build_dashboard.py'});
 }
 </script>
 </body>
