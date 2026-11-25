@@ -1,5 +1,5 @@
 {
- "_note": "Everyone on the Outreach tab. Public profile info only (Clay, checked 25 Nov 2026). email_status says whether a work email is on file in the private contacts sheet; the addresses themselves are never stored in this public repo.",
+ "_note": "Everyone on the Outreach tab. Public profile info only (Clay, checked 25 Nov 2026). email_status says whether a work email is on file in the private contacts sheet; the addresses themselves are never stored in this public repo. email_masked shows only the first letter and the domain.",
  "contacts": [
   {
    "company": "Siete Foods (PepsiCo)",
@@ -9,7 +9,8 @@
    "name": "Jamie Chodnicki",
    "title": "Director of Brand Strategy",
    "linkedin": "https://www.linkedin.com/in/jamie-chodnicki-237953126/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "j•••••••••@sietefoods.com"
   },
   {
    "company": "PepsiCo",
@@ -20,7 +21,8 @@
    "name": "Kyle Gore",
    "title": "VP, Doritos and Cheetos, PepsiCo Global Foods",
    "linkedin": "https://www.linkedin.com/in/kyle-gore-a3b8ba1/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "k••••••••@pepsico.com"
   },
   {
    "company": "PepsiCo",
@@ -30,7 +32,8 @@
    "name": "Kelsey Werner",
    "title": "Marketing Director, Doritos",
    "linkedin": "https://www.linkedin.com/in/kelsey-werner-41539480/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "k••••••••••••@pepsico.com"
   },
   {
    "company": "PepsiCo",
@@ -40,7 +43,8 @@
    "name": "Alexis Porter",
    "title": "VP, Lay's, Global Foods Group",
    "linkedin": "https://www.linkedin.com/in/alexis-porter-1464724/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "a••••••••••••@pepsico.com"
   },
   {
    "company": "The Campbell's Company",
@@ -50,7 +54,8 @@
    "name": "Matthew Venturella",
    "title": "Senior Brand Manager, Kettle Brand",
    "linkedin": "https://www.linkedin.com/in/mattventurella/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "m••••••••••••••@campbells.com"
   },
   {
    "company": "The Campbell's Company",
@@ -60,7 +65,8 @@
    "name": "Kristina Moses",
    "title": "Senior Brand Manager, Cape Cod",
    "linkedin": "https://www.linkedin.com/in/kristinakirkmoses/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "k•••••••••••••@campbells.com"
   },
   {
    "company": "Barcel USA (Grupo Bimbo)",
@@ -70,7 +76,8 @@
    "name": "Trevor Moore",
    "title": "Brand Manager, Takis",
    "linkedin": "https://www.linkedin.com/in/trevor-moore-6a51b594/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "t•••••••••••@grupobimbo.com"
   },
   {
    "company": "Mars (Kellanova)",
@@ -80,7 +87,8 @@
    "name": "Liz Thomas",
    "title": "Global Marketing Director, Pringles & Cheez-It",
    "linkedin": "https://www.linkedin.com/in/lizthomas15/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "t••••••@effem.com"
   },
   {
    "company": "Mars (Kellanova)",
@@ -90,7 +98,8 @@
    "name": "Dani Soper",
    "title": "Director, Strategic Transformation, Salty Snacks",
    "linkedin": "https://www.linkedin.com/in/danielledominskisoper/",
-   "email_status": "check"
+   "email_status": "check",
+   "email_masked": "d•••••••••@kellanova.com"
   },
   {
    "company": "The Hershey Company",
@@ -100,7 +109,8 @@
    "name": "Hannah Sheffield",
    "title": "Senior Brand Manager, SkinnyPop & Pirate's Booty",
    "linkedin": "https://www.linkedin.com/in/hannahsheffield/",
-   "email_status": "check"
+   "email_status": "check",
+   "email_masked": "h•••@hersheys.com"
   },
   {
    "company": "LesserEvil (Hershey)",
@@ -110,7 +120,8 @@
    "name": "Ali Broderick",
    "title": "Associate Director, Brand Marketing",
    "linkedin": "https://www.linkedin.com/in/alison-broderick/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "a•••@lesserevil.com"
   },
   {
    "company": "Mars",
@@ -122,7 +133,8 @@
    "name": "Lindsay Gatto",
    "title": "Senior Manager, Digital Strategy",
    "linkedin": "https://www.linkedin.com/in/lindsaygatto/",
-   "email_status": "none"
+   "email_status": "none",
+   "email_masked": ""
   },
   {
    "company": "Mars",
@@ -132,7 +144,8 @@
    "name": "Larrysa McAllister",
    "title": "Associate Brand Manager, Snickers",
    "linkedin": "https://www.linkedin.com/in/larrysamc/",
-   "email_status": "none"
+   "email_status": "none",
+   "email_masked": ""
   },
   {
    "company": "The Hershey Company",
@@ -145,7 +158,8 @@
    "name": "Samantha Siegal",
    "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
    "linkedin": "https://www.linkedin.com/in/samantha-siegal/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "s••••••@hersheys.com"
   },
   {
    "company": "Tony's Chocolonely",
@@ -155,7 +169,8 @@
    "name": "Madison Marisi",
    "title": "VP of Marketing, North America",
    "linkedin": "https://www.linkedin.com/in/madison-marisi/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "m••••••@tonyschocolonely.com"
   },
   {
    "company": "Mondelez",
@@ -165,7 +180,8 @@
    "name": "Grace Gallic",
    "title": "Associate Brand Manager, Innovation, Hu",
    "linkedin": "https://www.linkedin.com/in/gracegallic/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "g•••••••••••@mdlz.com"
   },
   {
    "company": "Unreal Snacks",
@@ -175,7 +191,8 @@
    "name": "Brooke Palandro",
    "title": "Director of Brand Voice",
    "linkedin": "https://www.linkedin.com/in/brooke-palandro/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "b••••••••@unrealsnacks.com"
   },
   {
    "company": "Unreal Snacks",
@@ -185,7 +202,8 @@
    "name": "Meredith Ferguson",
    "title": "Director of Brand Partnerships & Earned Media",
    "linkedin": "https://www.linkedin.com/in/meredith-kassler/",
-   "email_status": "confirmed"
+   "email_status": "confirmed",
+   "email_masked": "m••••••••@unrealsnacks.com"
   }
  ]
 }

@@ -132,7 +132,7 @@ body:not([data-view=outreach]) .out{display:none}
     <thead><tr><th>#</th><th>Contact</th><th>Brand</th><th>AI share</th><th>First line of the email</th><th>Email</th></tr></thead>
     <tbody></tbody>
   </table></div>
-  <p class="note" style="margin-top:14px">Each first line is rewritten from that Monday's answers, using the brand this person covers that AI recommends least. Email addresses are kept in a private sheet, not on this page.</p>
+  <p class="note" style="margin-top:14px">Each first line is rewritten from that Monday's answers, using the brand this person covers that AI recommends least. Email addresses are masked here; the full addresses are kept in a private sheet.</p>
 </div></section>
 
 <script>
@@ -229,7 +229,7 @@ function outreach(){
     <td><b>${esc(r.focus)}</b>${r.brands.length>1?`<small style="display:block;color:var(--quiet);font-size:13px">also ${esc(r.brands.filter(b=>b!==r.focus).join(', '))}</small>`:''}</td>
     <td class="n">${pct(r.share)}<small style="display:block;color:var(--quiet);font-size:13px">${r.mentions}/${r.possible}</small></td>
     <td class="intro">${esc(r.intro)}<br><button class="cp" data-o="${i}">Copy line</button></td>
-    <td><span class="st ${s[0]}">${s[1]}</span></td></tr>`}).join('');
+    <td>${r.email_masked?`<span style="white-space:nowrap;font-size:14px">${esc(r.email_masked)}</span><br>`:""}<span class="st ${s[0]}">${s[1]}</span></td></tr>`}).join('');
   for(const c of document.querySelectorAll('#otab .cp'))c.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(rows[+c.dataset.o].intro);c.textContent='Copied'}catch(e){c.textContent='Select the text to copy'}setTimeout(()=>c.textContent='Copy line',1800)});
 }
 function route(){
