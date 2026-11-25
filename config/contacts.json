@@ -1,0 +1,191 @@
+{
+ "_note": "Everyone on the Outreach tab. Public profile info only (Clay, checked 25 Nov 2026). email_status says whether a work email is on file in the private contacts sheet; the addresses themselves are never stored in this public repo.",
+ "contacts": [
+  {
+   "company": "Siete Foods (PepsiCo)",
+   "brands": [
+    "Siete"
+   ],
+   "name": "Jamie Chodnicki",
+   "title": "Director of Brand Strategy",
+   "linkedin": "https://www.linkedin.com/in/jamie-chodnicki-237953126/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "PepsiCo",
+   "brands": [
+    "Doritos",
+    "Cheetos"
+   ],
+   "name": "Kyle Gore",
+   "title": "VP, Doritos and Cheetos, PepsiCo Global Foods",
+   "linkedin": "https://www.linkedin.com/in/kyle-gore-a3b8ba1/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "PepsiCo",
+   "brands": [
+    "Doritos"
+   ],
+   "name": "Kelsey Werner",
+   "title": "Marketing Director, Doritos",
+   "linkedin": "https://www.linkedin.com/in/kelsey-werner-41539480/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "PepsiCo",
+   "brands": [
+    "Lay's"
+   ],
+   "name": "Alexis Porter",
+   "title": "VP, Lay's, Global Foods Group",
+   "linkedin": "https://www.linkedin.com/in/alexis-porter-1464724/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "The Campbell's Company",
+   "brands": [
+    "Kettle Brand"
+   ],
+   "name": "Matthew Venturella",
+   "title": "Senior Brand Manager, Kettle Brand",
+   "linkedin": "https://www.linkedin.com/in/mattventurella/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "The Campbell's Company",
+   "brands": [
+    "Cape Cod"
+   ],
+   "name": "Kristina Moses",
+   "title": "Senior Brand Manager, Cape Cod",
+   "linkedin": "https://www.linkedin.com/in/kristinakirkmoses/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Barcel USA (Grupo Bimbo)",
+   "brands": [
+    "Takis"
+   ],
+   "name": "Trevor Moore",
+   "title": "Brand Manager, Takis",
+   "linkedin": "https://www.linkedin.com/in/trevor-moore-6a51b594/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Mars (Kellanova)",
+   "brands": [
+    "Pringles"
+   ],
+   "name": "Liz Thomas",
+   "title": "Global Marketing Director, Pringles & Cheez-It",
+   "linkedin": "https://www.linkedin.com/in/lizthomas15/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Mars (Kellanova)",
+   "brands": [
+    "Pringles"
+   ],
+   "name": "Dani Soper",
+   "title": "Director, Strategic Transformation, Salty Snacks",
+   "linkedin": "https://www.linkedin.com/in/danielledominskisoper/",
+   "email_status": "check"
+  },
+  {
+   "company": "The Hershey Company",
+   "brands": [
+    "SkinnyPop"
+   ],
+   "name": "Hannah Sheffield",
+   "title": "Senior Brand Manager, SkinnyPop & Pirate's Booty",
+   "linkedin": "https://www.linkedin.com/in/hannahsheffield/",
+   "email_status": "check"
+  },
+  {
+   "company": "LesserEvil (Hershey)",
+   "brands": [
+    "LesserEvil"
+   ],
+   "name": "Ali Broderick",
+   "title": "Associate Director, Brand Marketing",
+   "linkedin": "https://www.linkedin.com/in/alison-broderick/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Mars",
+   "brands": [
+    "Snickers",
+    "Twix",
+    "3 Musketeers"
+   ],
+   "name": "Lindsay Gatto",
+   "title": "Senior Manager, Digital Strategy",
+   "linkedin": "https://www.linkedin.com/in/lindsaygatto/",
+   "email_status": "none"
+  },
+  {
+   "company": "Mars",
+   "brands": [
+    "Snickers"
+   ],
+   "name": "Larrysa McAllister",
+   "title": "Associate Brand Manager, Snickers",
+   "linkedin": "https://www.linkedin.com/in/larrysamc/",
+   "email_status": "none"
+  },
+  {
+   "company": "The Hershey Company",
+   "brands": [
+    "Reese's",
+    "Hershey's",
+    "Kit Kat",
+    "Lily's"
+   ],
+   "name": "Samantha Siegal",
+   "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
+   "linkedin": "https://www.linkedin.com/in/samantha-siegal/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Tony's Chocolonely",
+   "brands": [
+    "Tony's Chocolonely"
+   ],
+   "name": "Madison Marisi",
+   "title": "VP of Marketing, North America",
+   "linkedin": "https://www.linkedin.com/in/madison-marisi/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Mondelez",
+   "brands": [
+    "Hu"
+   ],
+   "name": "Grace Gallic",
+   "title": "Associate Brand Manager, Innovation, Hu",
+   "linkedin": "https://www.linkedin.com/in/gracegallic/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Unreal Snacks",
+   "brands": [
+    "Unreal"
+   ],
+   "name": "Brooke Palandro",
+   "title": "Director of Brand Voice",
+   "linkedin": "https://www.linkedin.com/in/brooke-palandro/",
+   "email_status": "confirmed"
+  },
+  {
+   "company": "Unreal Snacks",
+   "brands": [
+    "Unreal"
+   ],
+   "name": "Meredith Ferguson",
+   "title": "Director of Brand Partnerships & Earned Media",
+   "linkedin": "https://www.linkedin.com/in/meredith-kassler/",
+   "email_status": "confirmed"
+  }
+ ]
+}

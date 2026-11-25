@@ -100,6 +100,47 @@ def opener(brand, s, gaps, qmap, fit):
     return f"{brand} came up in {s['mentions']} of {s['possible']} AI answers this week ({pct}%)."
 
 
+CATEGORY = {"chips": "chip-buying", "candy": "candy and chocolate"}
+ENGINE_LIST = "ChatGPT, Gemini and Perplexity"
+
+
+def intro(brand, info, s, gaps, qmap, fit):
+    """One plain first line for an email: where the brand stands in AI answers, then the clearest miss."""
+    cat = CATEGORY.get(info["group"], "snack")
+    m, n, pct = s["mentions"], s["possible"], round(s["share"] * 100)
+    if s["share"] < 0.10:
+        lead = (f"Right now {brand} is barely showing up in AI search. This week {ENGINE_LIST} "
+                f"named {brand} in only {m} of {n} answers to {cat} questions ({pct}%).")
+    elif s["share"] < 0.25:
+        lead = (f"Right now {brand} is missing from most AI answers in its category. This week {ENGINE_LIST} "
+                f"named {brand} in only {m} of {n} answers to {cat} questions ({pct}%).")
+    else:
+        lead = (f"{brand} shows up in {m} of {n} AI answers to {cat} questions ({pct}%) across "
+                f"{ENGINE_LIST} this week")
+        lead += (", but was never the first brand recommended." if s["first"] == 0 else
+                 f", and was the first brand recommended {s['first']} times.")
+    if gaps:
+        g = gaps[0]
+        w = [x[0] for x in g["winners"][:3]]
+        q = qmap[g["qid"]]["text"].rstrip("?")
+        tail = f" When asked \u201c{q}?\u201d none of them mentioned {brand}"
+        tail += f"; they recommended {', '.join(w[:-1])} and {w[-1]} instead." if len(w) > 1 else "."
+        return lead + tail
+    weak = [(v["m"] / v["n"], qid, v) for qid, v in s["by_q"].items()
+            if qid in fit and v["n"] and v["m"] / v["n"] < 0.5]
+    if weak:
+        _, qid, v = min(weak)
+        q = qmap[qid]["text"].rstrip("?")
+        return lead + f" On \u201c{q}?\u201d it came up in just {v['m']} of {v['n']} answers."
+    eng = s["by_engine"]
+    if len(eng) > 1 and max(eng.values()) - min(eng.values()) >= 0.2:
+        label = {"chatgpt": "ChatGPT", "gemini": "Gemini", "perplexity": "Perplexity"}
+        hi, lo = max(eng, key=eng.get), min(eng, key=eng.get)
+        return lead + (f" It depends heavily on the engine: {label[hi]} named it in {round(eng[hi]*100)}% "
+                       f"of those answers, {label[lo]} in only {round(eng[lo]*100)}%.")
+    return lead
+
+
 def main():
     questions = json.loads((ROOT / "config" / "questions.json").read_text())
     brands = json.loads((ROOT / "config" / "brands.json").read_text())
@@ -136,10 +177,25 @@ def main():
             "brand": brand, "group": info["group"], **s, "change": change,
             "gaps": [{"question": qmap[g["qid"]]["text"], "winners": g["winners"][:4]} for g in gaps],
             "opportunity": opp, "lead": lead, "opener": opener(brand, s, gaps, qmap, fit),
+            "intro": intro(brand, info, s, gaps, qmap, fit),
             "series": [{"date": d, "share": per_week[d][0][brand]["share"],
                         "by_engine": per_week[d][0][brand]["by_engine"]} for d in dates],
         })
     out_brands.sort(key=lambda b: -b["opportunity"])
+
+    # Outreach tab: every contact, with the intro for the weakest brand they cover
+    by_name = {b["brand"]: b for b in out_brands}
+    people = json.loads((ROOT / "config" / "contacts.json").read_text())["contacts"]
+    outreach = []
+    for p in people:
+        covered = [by_name[b] for b in p["brands"] if b in by_name]
+        if not covered:
+            continue
+        focus = max(covered, key=lambda b: b["opportunity"])
+        outreach.append({**p, "focus": focus["brand"], "share": focus["share"],
+                         "mentions": focus["mentions"], "possible": focus["possible"],
+                         "opportunity": focus["opportunity"], "intro": focus["intro"]})
+    outreach.sort(key=lambda p: -p["opportunity"])
 
     meta_sources = sorted({a.get("source", "API run") for a in weeks[latest]})
     data = {
@@ -150,6 +206,7 @@ def main():
         "questions": [{"id": q["id"], "text": q["text"], "category": q["category"],
                        "answers": winners[q["id"]]["answers"], "top": winners[q["id"]]["top"]} for q in questions],
         "brands": out_brands,
+        "outreach": outreach,
     }
     SITE.mkdir(exist_ok=True)
     (SITE / "data.json").write_text(json.dumps(data, indent=1))
