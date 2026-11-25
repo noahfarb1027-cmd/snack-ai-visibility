@@ -116,34 +116,57 @@ CATEGORY = {"chips": "chip-buying", "candy": "candy and chocolate"}
 ENGINE_LIST = "ChatGPT, Gemini and Perplexity"
 
 
-def intro(brand, info, s, gaps, qmap, fit):
-    """One plain first line for an email: where the brand stands in AI answers, then the clearest miss."""
+def intro(brand, info, s, gaps, qmap, fit, v=0):
+    """One plain first line for an email: where the brand stands in AI answers, then the clearest miss.
+    v picks the wording, so a list of these doesn't open the same way every time."""
     cat = CATEGORY.get(info["group"], "snack")
-    m, n, pct = s["mentions"], s["possible"], round(s["share"] * 100)
+    about = "chips" if info["group"] == "chips" else "candy and chocolate"
+    b, m, n, pct = brand, s["mentions"], s["possible"], round(s["share"] * 100)
     if s["share"] < 0.10:
-        lead = (f"Right now {brand} is barely showing up in AI search. This week {ENGINE_LIST} "
-                f"named {brand} in only {m} of {n} answers to {cat} questions ({pct}%).")
+        leads = [
+            f"Right now {b} is barely showing up in AI search. This week {ENGINE_LIST} named {b} in only {m} of {n} answers to {cat} questions ({pct}%).",
+            f"{b} was named in just {m} of {n} AI answers to {cat} questions this week ({pct}%), across {ENGINE_LIST}.",
+            f"When shoppers ask ChatGPT, Gemini or Perplexity about {about}, {b} almost never comes up: {m} of {n} answers this week ({pct}%).",
+            f"Out of {n} answers {ENGINE_LIST} gave to {cat} questions this week, {b} appeared in {m} ({pct}%).",
+        ]
     elif s["share"] < 0.25:
-        lead = (f"Right now {brand} is missing from most AI answers in its category. This week {ENGINE_LIST} "
-                f"named {brand} in only {m} of {n} answers to {cat} questions ({pct}%).")
+        leads = [
+            f"Right now {b} is missing from most AI answers in its category. This week {ENGINE_LIST} named {b} in only {m} of {n} answers to {cat} questions ({pct}%).",
+            f"{b} is left out of most AI shopping answers: {ENGINE_LIST} named it in {m} of {n} {cat} answers this week ({pct}%).",
+            f"Out of {n} AI answers to {cat} questions this week, {b} came up in {m} ({pct}%).",
+            f"Most times an AI assistant answers a question about {about}, {b} isn't in the answer. This week it was named in {m} of {n} ({pct}%).",
+        ]
     else:
-        lead = (f"{brand} shows up in {m} of {n} AI answers to {cat} questions ({pct}%) across "
-                f"{ENGINE_LIST} this week")
-        lead += (", but was never the first brand recommended." if s["first"] == 0 else
+        first = (", but was never the first brand recommended." if s["first"] == 0 else
                  f", and was the first brand recommended {s['first']} times.")
+        leads = [
+            f"{b} shows up in {m} of {n} AI answers to {cat} questions ({pct}%) across {ENGINE_LIST} this week" + first,
+            f"{b} is one of the more visible brands in AI answers about {about}, named in {m} of {n} this week ({pct}%)" + first,
+            f"{ENGINE_LIST} named {b} in {m} of {n} {cat} answers this week ({pct}%)."
+            + (" It was never the first brand recommended." if s["first"] == 0 else
+               f" It was the first brand recommended {s['first']} times."),
+        ]
+    lead = leads[v % len(leads)]
+    t = (v + 1)  # offset so the two halves of a line don't rotate together
     if gaps:
         g = gaps[0]
         w = [x[0] for x in g["winners"] if OWNER.get(x[0]) is None or OWNER.get(x[0]) != OWNER.get(brand)][:3]
         q = qmap[g["qid"]]["text"].rstrip("?")
-        tail = f" When asked \u201c{q}?\u201d none of them mentioned {brand}"
-        tail += f"; they recommended {', '.join(w[:-1])} and {w[-1]} instead." if len(w) > 1 else "."
-        return lead + tail
-    weak = [(v["m"] / v["n"], qid, v) for qid, v in s["by_q"].items()
-            if qid in fit and v["n"] and v["m"] / v["n"] < 0.5]
+        names = f"{', '.join(w[:-1])} and {w[-1]}" if len(w) > 1 else (w[0] if w else "other brands")
+        tails = [
+            f" When asked \u201c{q}?\u201d none of them mentioned {b}; they recommended {names} instead.",
+            f" Ask \u201c{q}?\u201d and {b} doesn't come up at all; the answers go to {names}.",
+            f" For \u201c{q}?\u201d the engines recommended {names}, and never {b}.",
+        ]
+        return lead + tails[t % len(tails)]
+    weak = [(x["m"] / x["n"], qid, x) for qid, x in s["by_q"].items()
+            if qid in fit and x["n"] and x["m"] / x["n"] < 0.5]
     if weak:
-        _, qid, v = min(weak)
+        _, qid, x = min(weak)
         q = qmap[qid]["text"].rstrip("?")
-        return lead + f" On \u201c{q}?\u201d it came up in just {v['m']} of {v['n']} answers."
+        tails = [f" On \u201c{q}?\u201d it came up in just {x['m']} of {x['n']} answers.",
+                 f" It appeared in only {x['m']} of {x['n']} answers to \u201c{q}?\u201d"]
+        return lead + tails[t % len(tails)]
     eng = s["by_engine"]
     if len(eng) > 1 and max(eng.values()) - min(eng.values()) >= 0.2:
         label = {"chatgpt": "ChatGPT", "gemini": "Gemini", "perplexity": "Perplexity"}
@@ -189,11 +212,13 @@ def main():
             "brand": brand, "group": info["group"], **s, "change": change,
             "gaps": [{"question": qmap[g["qid"]]["text"], "winners": g["winners"][:4]} for g in gaps],
             "opportunity": opp, "lead": lead, "opener": opener(brand, s, gaps, qmap, fit),
-            "intro": intro(brand, info, s, gaps, qmap, fit),
+            "_intro_args": (brand, info, s, gaps, qmap, fit),
             "series": [{"date": d, "share": per_week[d][0][brand]["share"],
                         "by_engine": per_week[d][0][brand]["by_engine"]} for d in dates],
         })
     out_brands.sort(key=lambda b: -b["opportunity"])
+    for i, ob in enumerate(out_brands):  # rank order, so neighbouring rows get different wording
+        ob["intro"] = intro(*ob.pop("_intro_args"), v=i)
 
     # Outreach tab: every contact, with the intro for the weakest brand they cover
     by_name = {b["brand"]: b for b in out_brands}
