@@ -191,7 +191,7 @@ function detail(b){
   const gapBy=Object.fromEntries(b.gaps.map(g=>[g.question,g]));
   const qs=(b.fit_questions||[]).map(q=>{const g=gapBy[q.text];const share=q.n?q.m/q.n:0;return `<div class="dq"><b>${esc(q.text)}</b>
     <div class="qrow"><div class="trk"><div class="fill" style="width:${share*100}%"></div></div><span class="pc">${q.m} of ${q.n}</span></div>
-    ${g?`<p>Named instead: ${g.winners.slice(0,4).map(w=>`${esc(w[0])} (${w[1]})`).join(', ')}</p>`:''}</div>`}).join('');
+    ${(()=>{const top=((D.questions.find(x=>x.id===q.id)||{}).top||[]).filter(w=>w[0]!==b.brand).slice(0,4);return top.length?`<p>${g?'Named instead':'Also named'}: ${top.map(w=>`${esc(w[0])} (${w[1]})`).join(', ')}</p>`:''})()}</div>`}).join('');
   const eng=Object.entries(b.by_engine).filter(([e])=>ENG[e]).map(([e,v])=>`${ENG[e].n} ${pct(v)}`).join(' \u00b7 ');
   return `<h3>${esc(b.brand)}: named in ${b.mentions} of ${b.possible} answers to the questions it competes in</h3>
     <p class="line" style="color:var(--quiet)">${esc(eng)} \u00b7 first pick ${b.first} time${b.first===1?'':'s'}</p>${qs}
