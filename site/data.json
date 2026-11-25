@@ -1,0 +1,2107 @@
+{
+ "updated": "2026-11-25",
+ "previous": null,
+ "weeks": [
+  "2026-11-25"
+ ],
+ "answers_this_week": 72,
+ "engines": [
+  "chatgpt",
+  "gemini",
+  "perplexity"
+ ],
+ "source_this_week": "manual browser run",
+ "questions": [
+  {
+   "id": "healthy_chips",
+   "text": "What are the best healthy chips?",
+   "category": "chips",
+   "answers": 6,
+   "top": [
+    [
+     "Siete",
+     5
+    ],
+    [
+     "Popchips",
+     5
+    ],
+    [
+     "Quest",
+     5
+    ],
+    [
+     "Brad's",
+     4
+    ],
+    [
+     "Jackson's",
+     4
+    ],
+    [
+     "Good Health",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "party_chips",
+   "text": "What are the best chips for a party?",
+   "category": "chips",
+   "answers": 6,
+   "top": [
+    [
+     "Ruffles",
+     6
+    ],
+    [
+     "Doritos",
+     6
+    ],
+    [
+     "Cape Cod",
+     6
+    ],
+    [
+     "Tostitos",
+     5
+    ],
+    [
+     "Lay's",
+     5
+    ],
+    [
+     "Fritos",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "gf_chips",
+   "text": "What are the best gluten-free chips?",
+   "category": "chips",
+   "answers": 6,
+   "top": [
+    [
+     "Siete",
+     6
+    ],
+    [
+     "Late July",
+     6
+    ],
+    [
+     "Kettle Brand",
+     6
+    ],
+    [
+     "Cape Cod",
+     4
+    ],
+    [
+     "Lay's",
+     4
+    ],
+    [
+     "Doritos",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "spicy_chips",
+   "text": "What are the best spicy chips?",
+   "category": "chips",
+   "answers": 6,
+   "top": [
+    [
+     "Takis",
+     6
+    ],
+    [
+     "Herr's",
+     6
+    ],
+    [
+     "Cheetos",
+     5
+    ],
+    [
+     "Ruffles",
+     5
+    ],
+    [
+     "Doritos",
+     5
+    ],
+    [
+     "Kettle Brand",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "kids_chips",
+   "text": "What are the best chips for kids' lunches?",
+   "category": "chips",
+   "answers": 6,
+   "top": [
+    [
+     "Siete",
+     4
+    ],
+    [
+     "Harvest Snaps",
+     4
+    ],
+    [
+     "Boulder Canyon",
+     4
+    ],
+    [
+     "SunChips",
+     4
+    ],
+    [
+     "Simple Mills",
+     2
+    ],
+    [
+     "Lay's",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "best_candy",
+   "text": "What is the best candy bar?",
+   "category": "candy",
+   "answers": 6,
+   "top": [
+    [
+     "Snickers",
+     6
+    ],
+    [
+     "Reese's",
+     6
+    ],
+    [
+     "Kit Kat",
+     5
+    ],
+    [
+     "Twix",
+     4
+    ],
+    [
+     "Tony's Chocolonely",
+     3
+    ],
+    [
+     "Payday",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "healthy_candy",
+   "text": "What is the healthiest candy bar?",
+   "category": "candy",
+   "answers": 6,
+   "top": [
+    [
+     "Unreal",
+     6
+    ],
+    [
+     "Snickers",
+     5
+    ],
+    [
+     "Hu",
+     4
+    ],
+    [
+     "Lindt",
+     3
+    ],
+    [
+     "Payday",
+     3
+    ],
+    [
+     "Almond Joy",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "lowsugar_choc",
+   "text": "What is the best low-sugar chocolate bar?",
+   "category": "candy",
+   "answers": 6,
+   "top": [
+    [
+     "Lily's",
+     5
+    ],
+    [
+     "ChocZero",
+     4
+    ],
+    [
+     "Spring & Mulberry",
+     2
+    ],
+    [
+     "Alter Eco",
+     2
+    ],
+    [
+     "Lindt",
+     2
+    ],
+    [
+     "GoodSam",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "vegan_choc",
+   "text": "What is the best vegan chocolate bar?",
+   "category": "candy",
+   "answers": 6,
+   "top": [
+    [
+     "Hu",
+     6
+    ],
+    [
+     "Raaka",
+     4
+    ],
+    [
+     "Lindt",
+     3
+    ],
+    [
+     "Endangered Species",
+     3
+    ],
+    [
+     "LoveRaw",
+     2
+    ],
+    [
+     "Alter Eco",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "road_trip",
+   "text": "What are the best snacks for a road trip?",
+   "category": "both",
+   "answers": 6,
+   "top": [
+    [
+     "Goldfish",
+     3
+    ],
+    [
+     "Cheez-It",
+     3
+    ],
+    [
+     "M&M's",
+     1
+    ],
+    [
+     "Larabar",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "ethical_choc",
+   "text": "What is the most ethical chocolate brand?",
+   "category": "candy",
+   "answers": 6,
+   "top": [
+    [
+     "Tony's Chocolonely",
+     6
+    ],
+    [
+     "Alter Eco",
+     5
+    ],
+    [
+     "Beyond Good",
+     3
+    ],
+    [
+     "Divine",
+     3
+    ],
+    [
+     "Taza",
+     2
+    ],
+    [
+     "Raaka",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "bfy_brands",
+   "text": "What are the best better-for-you snack brands?",
+   "category": "both",
+   "answers": 6,
+   "top": [
+    [
+     "Chomps",
+     5
+    ],
+    [
+     "LesserEvil",
+     5
+    ],
+    [
+     "Biena",
+     4
+    ],
+    [
+     "RXBAR",
+     4
+    ],
+    [
+     "Siete",
+     4
+    ],
+    [
+     "Hu",
+     4
+    ]
+   ]
+  }
+ ],
+ "brands": [
+  {
+   "brand": "SkinnyPop",
+   "group": "chips",
+   "mentions": 0,
+   "possible": 42,
+   "share": 0.0,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.0,
+    "gemini": 0.0,
+    "perplexity": 0.0
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best healthy chips?",
+     "winners": [
+      [
+       "Siete",
+       5
+      ],
+      [
+       "Popchips",
+       5
+      ],
+      [
+       "Quest",
+       5
+      ],
+      [
+       "Brad's",
+       4
+      ]
+     ]
+    },
+    {
+     "question": "What are the best better-for-you snack brands?",
+     "winners": [
+      [
+       "Chomps",
+       5
+      ],
+      [
+       "LesserEvil",
+       5
+      ],
+      [
+       "Biena",
+       4
+      ],
+      [
+       "RXBAR",
+       4
+      ]
+     ]
+    },
+    {
+     "question": "What are the best chips for kids' lunches?",
+     "winners": [
+      [
+       "Siete",
+       4
+      ],
+      [
+       "Harvest Snaps",
+       4
+      ],
+      [
+       "Boulder Canyon",
+       4
+      ],
+      [
+       "SunChips",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 95,
+   "lead": {
+    "company": "The Hershey Company",
+    "name": "Hannah Sheffield",
+    "title": "Senior Brand Manager, SkinnyPop & Pirate's Booty",
+    "linkedin": "https://www.linkedin.com/in/hannahsheffield/"
+   },
+   "opener": "I asked ChatGPT, Gemini and Perplexity 42 snack questions where SkinnyPop fits this week, and none of them named it. For \u201cWhat are the best healthy chips,\u201d they named Siete, Popchips and Quest instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.0,
+     "by_engine": {
+      "chatgpt": 0.0,
+      "gemini": 0.0,
+      "perplexity": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "brand": "3 Musketeers",
+   "group": "candy",
+   "mentions": 1,
+   "possible": 42,
+   "share": 0.024,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.0,
+    "gemini": 0.071,
+    "perplexity": 0.0
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 0,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 1,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What is the best candy bar?",
+     "winners": [
+      [
+       "Snickers",
+       6
+      ],
+      [
+       "Reese's",
+       6
+      ],
+      [
+       "Kit Kat",
+       5
+      ],
+      [
+       "Twix",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 83,
+   "lead": {
+    "company": "Mars",
+    "name": "Lindsay Gatto",
+    "title": "Senior Manager, Digital Strategy",
+    "linkedin": "https://www.linkedin.com/in/lindsaygatto/"
+   },
+   "opener": "3 Musketeers came up in 1 of 42 AI answers this week (2%), but in none for \u201cWhat is the best candy bar,\u201d where Snickers, Reese's and Kit Kat were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.024,
+     "by_engine": {
+      "chatgpt": 0.0,
+      "gemini": 0.071,
+      "perplexity": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Hershey's",
+   "group": "candy",
+   "mentions": 3,
+   "possible": 42,
+   "share": 0.071,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.0,
+    "gemini": 0.143,
+    "perplexity": 0.071
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 2,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 1,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What is the best low-sugar chocolate bar?",
+     "winners": [
+      [
+       "Lily's",
+       5
+      ],
+      [
+       "ChocZero",
+       4
+      ],
+      [
+       "Spring & Mulberry",
+       2
+      ],
+      [
+       "Alter Eco",
+       2
+      ]
+     ]
+    }
+   ],
+   "opportunity": 80,
+   "lead": {
+    "company": "The Hershey Company",
+    "name": "Samantha Siegal",
+    "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
+    "linkedin": "https://www.linkedin.com/in/samantha-siegal/"
+   },
+   "opener": "Hershey's came up in 3 of 42 AI answers this week (7%), but in none for \u201cWhat is the best low-sugar chocolate bar,\u201d where Lily's, ChocZero and Spring & Mulberry were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.071,
+     "by_engine": {
+      "chatgpt": 0.0,
+      "gemini": 0.143,
+      "perplexity": 0.071
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Kit Kat",
+   "group": "candy",
+   "mentions": 5,
+   "possible": 42,
+   "share": 0.119,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.071,
+    "gemini": 0.143,
+    "perplexity": 0.143
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 5,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 0,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What is the healthiest candy bar?",
+     "winners": [
+      [
+       "Unreal",
+       6
+      ],
+      [
+       "Snickers",
+       5
+      ],
+      [
+       "Hu",
+       4
+      ],
+      [
+       "Lindt",
+       3
+      ]
+     ]
+    }
+   ],
+   "opportunity": 77,
+   "lead": {
+    "company": "The Hershey Company",
+    "name": "Samantha Siegal",
+    "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
+    "linkedin": "https://www.linkedin.com/in/samantha-siegal/"
+   },
+   "opener": "Kit Kat came up in 5 of 42 AI answers this week (12%), but in none for \u201cWhat is the healthiest candy bar,\u201d where Unreal, Snickers and Hu were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.119,
+     "by_engine": {
+      "chatgpt": 0.071,
+      "gemini": 0.143,
+      "perplexity": 0.143
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Twix",
+   "group": "candy",
+   "mentions": 5,
+   "possible": 42,
+   "share": 0.119,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.071,
+    "gemini": 0.214,
+    "perplexity": 0.071
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 4,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 1,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [],
+   "opportunity": 72,
+   "lead": {
+    "company": "Mars",
+    "name": "Lindsay Gatto",
+    "title": "Senior Manager, Digital Strategy",
+    "linkedin": "https://www.linkedin.com/in/lindsaygatto/"
+   },
+   "opener": "Twix came up in 5 of 42 AI answers this week, but in only 1 of 6 for \u201cWhat is the healthiest candy bar.\u201d",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.119,
+     "by_engine": {
+      "chatgpt": 0.071,
+      "gemini": 0.214,
+      "perplexity": 0.071
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Cheetos",
+   "group": "chips",
+   "mentions": 9,
+   "possible": 42,
+   "share": 0.214,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.143,
+    "gemini": 0.143,
+    "perplexity": 0.357
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 3,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 5,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 1,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best gluten-free chips?",
+     "winners": [
+      [
+       "Siete",
+       6
+      ],
+      [
+       "Late July",
+       6
+      ],
+      [
+       "Kettle Brand",
+       6
+      ],
+      [
+       "Cape Cod",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 70,
+   "lead": {
+    "company": "PepsiCo",
+    "name": "Kyle Gore",
+    "title": "VP, Doritos and Cheetos",
+    "linkedin": "https://www.linkedin.com/in/kyle-gore-a3b8ba1/"
+   },
+   "opener": "Cheetos came up in 9 of 42 AI answers this week (21%), but in none for \u201cWhat are the best gluten-free chips,\u201d where Siete, Late July and Kettle Brand were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.214,
+     "by_engine": {
+      "chatgpt": 0.143,
+      "gemini": 0.143,
+      "perplexity": 0.357
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Pringles",
+   "group": "chips",
+   "mentions": 7,
+   "possible": 42,
+   "share": 0.167,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.0,
+    "gemini": 0.071,
+    "perplexity": 0.429
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 1,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 3,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 1,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 2,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [],
+   "opportunity": 68,
+   "lead": {
+    "company": "Mars (Kellanova)",
+    "name": "Liz Thomas",
+    "title": "Global Marketing Director, Pringles & Cheez-It",
+    "linkedin": "https://www.linkedin.com/in/lizthomas15/"
+   },
+   "opener": "Pringles came up in 7 of 42 AI answers this week, but in only 1 of 6 for \u201cWhat are the best chips for a party.\u201d",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.167,
+     "by_engine": {
+      "chatgpt": 0.0,
+      "gemini": 0.071,
+      "perplexity": 0.429
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Cape Cod",
+   "group": "chips",
+   "mentions": 12,
+   "possible": 42,
+   "share": 0.286,
+   "first": 1,
+   "by_engine": {
+    "chatgpt": 0.286,
+    "gemini": 0.286,
+    "perplexity": 0.286
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 6,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 4,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 2,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best healthy chips?",
+     "winners": [
+      [
+       "Siete",
+       5
+      ],
+      [
+       "Popchips",
+       5
+      ],
+      [
+       "Quest",
+       5
+      ],
+      [
+       "Brad's",
+       4
+      ]
+     ]
+    },
+    {
+     "question": "What are the best chips for kids' lunches?",
+     "winners": [
+      [
+       "Siete",
+       4
+      ],
+      [
+       "Harvest Snaps",
+       4
+      ],
+      [
+       "Boulder Canyon",
+       4
+      ],
+      [
+       "SunChips",
+       4
+      ]
+     ]
+    },
+    {
+     "question": "What are the best better-for-you snack brands?",
+     "winners": [
+      [
+       "Chomps",
+       5
+      ],
+      [
+       "LesserEvil",
+       5
+      ],
+      [
+       "Biena",
+       4
+      ],
+      [
+       "RXBAR",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 65,
+   "lead": {
+    "company": "The Campbell's Company",
+    "name": "Kristina Moses",
+    "title": "Senior Brand Manager, Cape Cod",
+    "linkedin": "https://www.linkedin.com/in/kristinakirkmoses/"
+   },
+   "opener": "Cape Cod came up in 12 of 42 AI answers this week (29%), but in none for \u201cWhat are the best healthy chips,\u201d where Siete, Popchips and Quest were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.286,
+     "by_engine": {
+      "chatgpt": 0.286,
+      "gemini": 0.286,
+      "perplexity": 0.286
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Unreal",
+   "group": "candy",
+   "mentions": 9,
+   "possible": 42,
+   "share": 0.214,
+   "first": 2,
+   "by_engine": {
+    "chatgpt": 0.143,
+    "gemini": 0.286,
+    "perplexity": 0.214
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 0,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 6,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 3,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What is the best low-sugar chocolate bar?",
+     "winners": [
+      [
+       "Lily's",
+       5
+      ],
+      [
+       "ChocZero",
+       4
+      ],
+      [
+       "Spring & Mulberry",
+       2
+      ],
+      [
+       "Alter Eco",
+       2
+      ]
+     ]
+    },
+    {
+     "question": "What is the best vegan chocolate bar?",
+     "winners": [
+      [
+       "Hu",
+       6
+      ],
+      [
+       "Raaka",
+       4
+      ],
+      [
+       "Lindt",
+       3
+      ],
+      [
+       "Endangered Species",
+       3
+      ]
+     ]
+    }
+   ],
+   "opportunity": 65,
+   "lead": {
+    "company": "Unreal Snacks",
+    "name": "Brooke Palandro",
+    "title": "Director of Brand Voice",
+    "linkedin": "https://www.linkedin.com/in/brooke-palandro/"
+   },
+   "opener": "Unreal came up in 9 of 42 AI answers this week (21%), but in none for \u201cWhat is the best low-sugar chocolate bar,\u201d where Lily's, ChocZero and Spring & Mulberry were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.214,
+     "by_engine": {
+      "chatgpt": 0.143,
+      "gemini": 0.286,
+      "perplexity": 0.214
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Lay's",
+   "group": "chips",
+   "mentions": 11,
+   "possible": 42,
+   "share": 0.262,
+   "first": 3,
+   "by_engine": {
+    "chatgpt": 0.143,
+    "gemini": 0.286,
+    "perplexity": 0.357
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 5,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 4,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 2,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best healthy chips?",
+     "winners": [
+      [
+       "Siete",
+       5
+      ],
+      [
+       "Popchips",
+       5
+      ],
+      [
+       "Quest",
+       5
+      ],
+      [
+       "Brad's",
+       4
+      ]
+     ]
+    },
+    {
+     "question": "What are the best spicy chips?",
+     "winners": [
+      [
+       "Takis",
+       6
+      ],
+      [
+       "Herr's",
+       6
+      ],
+      [
+       "Cheetos",
+       5
+      ],
+      [
+       "Ruffles",
+       5
+      ]
+     ]
+    }
+   ],
+   "opportunity": 62,
+   "lead": {
+    "company": "PepsiCo",
+    "name": "Alexis Porter",
+    "title": "VP, Lay's, Global Foods Group",
+    "linkedin": "https://www.linkedin.com/in/alexis-porter-1464724/"
+   },
+   "opener": "Lay's came up in 11 of 42 AI answers this week (26%), but in none for \u201cWhat are the best healthy chips,\u201d where Siete, Popchips and Quest were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.262,
+     "by_engine": {
+      "chatgpt": 0.143,
+      "gemini": 0.286,
+      "perplexity": 0.357
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Takis",
+   "group": "chips",
+   "mentions": 8,
+   "possible": 42,
+   "share": 0.19,
+   "first": 6,
+   "by_engine": {
+    "chatgpt": 0.143,
+    "gemini": 0.214,
+    "perplexity": 0.214
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 1,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 6,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 1,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best gluten-free chips?",
+     "winners": [
+      [
+       "Siete",
+       6
+      ],
+      [
+       "Late July",
+       6
+      ],
+      [
+       "Kettle Brand",
+       6
+      ],
+      [
+       "Cape Cod",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 62,
+   "lead": {
+    "company": "Barcel USA (Grupo Bimbo)",
+    "name": "Trevor Moore",
+    "title": "Brand Manager, Takis",
+    "linkedin": "https://www.linkedin.com/in/trevor-moore-6a51b594/"
+   },
+   "opener": "Takis came up in 8 of 42 AI answers this week (19%), but in none for \u201cWhat are the best gluten-free chips,\u201d where Siete, Late July and Kettle Brand were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.19,
+     "by_engine": {
+      "chatgpt": 0.143,
+      "gemini": 0.214,
+      "perplexity": 0.214
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Lily's",
+   "group": "candy",
+   "mentions": 8,
+   "possible": 42,
+   "share": 0.19,
+   "first": 4,
+   "by_engine": {
+    "chatgpt": 0.143,
+    "gemini": 0.286,
+    "perplexity": 0.143
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 0,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 2,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 5,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 1,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best better-for-you snack brands?",
+     "winners": [
+      [
+       "Chomps",
+       5
+      ],
+      [
+       "LesserEvil",
+       5
+      ],
+      [
+       "Biena",
+       4
+      ],
+      [
+       "RXBAR",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 62,
+   "lead": {
+    "company": "The Hershey Company",
+    "name": "Samantha Siegal",
+    "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
+    "linkedin": "https://www.linkedin.com/in/samantha-siegal/"
+   },
+   "opener": "Lily's came up in 8 of 42 AI answers this week (19%), but in none for \u201cWhat are the best better-for-you snack brands,\u201d where Chomps, LesserEvil and Biena were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.19,
+     "by_engine": {
+      "chatgpt": 0.143,
+      "gemini": 0.286,
+      "perplexity": 0.143
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Doritos",
+   "group": "chips",
+   "mentions": 15,
+   "possible": 42,
+   "share": 0.357,
+   "first": 0,
+   "by_engine": {
+    "chatgpt": 0.286,
+    "gemini": 0.429,
+    "perplexity": 0.357
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 6,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 4,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 5,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best chips for kids' lunches?",
+     "winners": [
+      [
+       "Siete",
+       4
+      ],
+      [
+       "Harvest Snaps",
+       4
+      ],
+      [
+       "Boulder Canyon",
+       4
+      ],
+      [
+       "SunChips",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 60,
+   "lead": {
+    "company": "PepsiCo",
+    "name": "Kelsey Werner",
+    "title": "Marketing Director, Doritos",
+    "linkedin": "https://www.linkedin.com/in/kelsey-werner-41539480/"
+   },
+   "opener": "Doritos came up in 15 of 42 AI answers this week (36%), but in none for \u201cWhat are the best chips for kids' lunches,\u201d where Siete, Harvest Snaps and Boulder Canyon were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.357,
+     "by_engine": {
+      "chatgpt": 0.286,
+      "gemini": 0.429,
+      "perplexity": 0.357
+     }
+    }
+   ]
+  },
+  {
+   "brand": "LesserEvil",
+   "group": "chips",
+   "mentions": 8,
+   "possible": 42,
+   "share": 0.19,
+   "first": 1,
+   "by_engine": {
+    "chatgpt": 0.214,
+    "gemini": 0.286,
+    "perplexity": 0.071
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 2,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 1,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 5,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [],
+   "opportunity": 57,
+   "lead": {
+    "company": "LesserEvil (Hershey)",
+    "name": "Ali Broderick",
+    "title": "Associate Director, Brand Marketing",
+    "linkedin": "https://www.linkedin.com/in/alison-broderick/"
+   },
+   "opener": "LesserEvil came up in 8 of 42 AI answers this week, but in only 1 of 6 for \u201cWhat are the best chips for kids' lunches.\u201d",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.19,
+     "by_engine": {
+      "chatgpt": 0.214,
+      "gemini": 0.286,
+      "perplexity": 0.071
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Reese's",
+   "group": "candy",
+   "mentions": 9,
+   "possible": 42,
+   "share": 0.214,
+   "first": 2,
+   "by_engine": {
+    "chatgpt": 0.143,
+    "gemini": 0.214,
+    "perplexity": 0.286
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 6,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 3,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [],
+   "opportunity": 55,
+   "lead": {
+    "company": "The Hershey Company",
+    "name": "Samantha Siegal",
+    "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat",
+    "linkedin": "https://www.linkedin.com/in/samantha-siegal/"
+   },
+   "opener": "Reese's came up in 9 of 42 AI answers this week, but in only 3 of 6 for \u201cWhat is the healthiest candy bar.\u201d",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.214,
+     "by_engine": {
+      "chatgpt": 0.143,
+      "gemini": 0.214,
+      "perplexity": 0.286
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Kettle Brand",
+   "group": "chips",
+   "mentions": 16,
+   "possible": 42,
+   "share": 0.381,
+   "first": 3,
+   "by_engine": {
+    "chatgpt": 0.357,
+    "gemini": 0.357,
+    "perplexity": 0.429
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 1,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 4,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 6,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 5,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best chips for kids' lunches?",
+     "winners": [
+      [
+       "Siete",
+       4
+      ],
+      [
+       "Harvest Snaps",
+       4
+      ],
+      [
+       "Boulder Canyon",
+       4
+      ],
+      [
+       "SunChips",
+       4
+      ]
+     ]
+    },
+    {
+     "question": "What are the best better-for-you snack brands?",
+     "winners": [
+      [
+       "Chomps",
+       5
+      ],
+      [
+       "LesserEvil",
+       5
+      ],
+      [
+       "Biena",
+       4
+      ],
+      [
+       "RXBAR",
+       4
+      ]
+     ]
+    }
+   ],
+   "opportunity": 53,
+   "lead": {
+    "company": "The Campbell's Company",
+    "name": "Matthew Venturella",
+    "title": "Senior Brand Manager, Kettle Brand",
+    "linkedin": "https://www.linkedin.com/in/mattventurella/"
+   },
+   "opener": "Kettle Brand came up in 16 of 42 AI answers this week (38%), but in none for \u201cWhat are the best chips for kids' lunches,\u201d where Siete, Harvest Snaps and Boulder Canyon were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.381,
+     "by_engine": {
+      "chatgpt": 0.357,
+      "gemini": 0.357,
+      "perplexity": 0.429
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Tony's Chocolonely",
+   "group": "candy",
+   "mentions": 10,
+   "possible": 42,
+   "share": 0.238,
+   "first": 6,
+   "by_engine": {
+    "chatgpt": 0.143,
+    "gemini": 0.214,
+    "perplexity": 0.357
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 3,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 0,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 1,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 6,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [],
+   "opportunity": 53,
+   "lead": {
+    "company": "Tony's Chocolonely",
+    "name": "Madison Marisi",
+    "title": "VP of Marketing, North America",
+    "linkedin": "https://www.linkedin.com/in/madison-marisi/"
+   },
+   "opener": "Tony's Chocolonely came up in 10 of 42 AI answers this week, but in only 1 of 6 for \u201cWhat is the best vegan chocolate bar.\u201d",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.238,
+     "by_engine": {
+      "chatgpt": 0.143,
+      "gemini": 0.214,
+      "perplexity": 0.357
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Snickers",
+   "group": "candy",
+   "mentions": 11,
+   "possible": 42,
+   "share": 0.262,
+   "first": 6,
+   "by_engine": {
+    "chatgpt": 0.214,
+    "gemini": 0.286,
+    "perplexity": 0.286
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 6,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 5,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 0,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [],
+   "opportunity": 52,
+   "lead": {
+    "company": "Mars",
+    "name": "Lindsay Gatto",
+    "title": "Senior Manager, Digital Strategy",
+    "linkedin": "https://www.linkedin.com/in/lindsaygatto/"
+   },
+   "opener": "Snickers came up in 11 of 42 AI answers this week (26%).",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.262,
+     "by_engine": {
+      "chatgpt": 0.214,
+      "gemini": 0.286,
+      "perplexity": 0.286
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Hu",
+   "group": "candy",
+   "mentions": 15,
+   "possible": 42,
+   "share": 0.357,
+   "first": 5,
+   "by_engine": {
+    "chatgpt": 0.429,
+    "gemini": 0.5,
+    "perplexity": 0.143
+   },
+   "by_q": {
+    "best_candy": {
+     "m": 0,
+     "n": 6
+    },
+    "healthy_candy": {
+     "m": 4,
+     "n": 6
+    },
+    "lowsugar_choc": {
+     "m": 1,
+     "n": 6
+    },
+    "vegan_choc": {
+     "m": 6,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "ethical_choc": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 4,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [],
+   "opportunity": 45,
+   "lead": {
+    "company": "Mondelez",
+    "name": "Grace Gallic",
+    "title": "Associate Brand Manager, Innovation, Hu",
+    "linkedin": "https://www.linkedin.com/in/gracegallic/"
+   },
+   "opener": "Hu came up in 15 of 42 AI answers this week, but in only 1 of 6 for \u201cWhat is the best low-sugar chocolate bar.\u201d",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.357,
+     "by_engine": {
+      "chatgpt": 0.429,
+      "gemini": 0.5,
+      "perplexity": 0.143
+     }
+    }
+   ]
+  },
+  {
+   "brand": "Siete",
+   "group": "chips",
+   "mentions": 23,
+   "possible": 42,
+   "share": 0.548,
+   "first": 7,
+   "by_engine": {
+    "chatgpt": 0.5,
+    "gemini": 0.643,
+    "perplexity": 0.5
+   },
+   "by_q": {
+    "healthy_chips": {
+     "m": 5,
+     "n": 6
+    },
+    "party_chips": {
+     "m": 4,
+     "n": 6
+    },
+    "gf_chips": {
+     "m": 6,
+     "n": 6
+    },
+    "spicy_chips": {
+     "m": 0,
+     "n": 6
+    },
+    "kids_chips": {
+     "m": 4,
+     "n": 6
+    },
+    "road_trip": {
+     "m": 0,
+     "n": 6
+    },
+    "bfy_brands": {
+     "m": 4,
+     "n": 6
+    }
+   },
+   "change": null,
+   "gaps": [
+    {
+     "question": "What are the best spicy chips?",
+     "winners": [
+      [
+       "Takis",
+       6
+      ],
+      [
+       "Herr's",
+       6
+      ],
+      [
+       "Cheetos",
+       5
+      ],
+      [
+       "Ruffles",
+       5
+      ]
+     ]
+    }
+   ],
+   "opportunity": 37,
+   "lead": {
+    "company": "Siete Foods (PepsiCo)",
+    "name": "Jamie Chodnicki",
+    "title": "Director of Brand Strategy",
+    "linkedin": "https://www.linkedin.com/in/jamie-chodnicki-237953126/"
+   },
+   "opener": "Siete came up in 23 of 42 AI answers this week (55%), but in none for \u201cWhat are the best spicy chips,\u201d where Takis, Herr's and Cheetos were named instead.",
+   "series": [
+    {
+     "date": "2026-11-25",
+     "share": 0.548,
+     "by_engine": {
+      "chatgpt": 0.5,
+      "gemini": 0.643,
+      "perplexity": 0.5
+     }
+    }
+   ]
+  }
+ ]
+}

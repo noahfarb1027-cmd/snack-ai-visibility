@@ -1,0 +1,23 @@
+{
+  "_note": "Who to talk to at each tracked brand. Names, titles and LinkedIn are public profile info from Clay (Nov 2026). Work emails are deliberately NOT stored here because this repo feeds a public page; keep them in your private CSV.",
+  "Siete":              {"company": "Siete Foods (PepsiCo)",        "name": "Jamie Chodnicki",   "title": "Director of Brand Strategy",                          "linkedin": "https://www.linkedin.com/in/jamie-chodnicki-237953126/"},
+  "Doritos":            {"company": "PepsiCo",                      "name": "Kelsey Werner",     "title": "Marketing Director, Doritos",                         "linkedin": "https://www.linkedin.com/in/kelsey-werner-41539480/"},
+  "Cheetos":            {"company": "PepsiCo",                      "name": "Kyle Gore",         "title": "VP, Doritos and Cheetos",                             "linkedin": "https://www.linkedin.com/in/kyle-gore-a3b8ba1/"},
+  "Lay's":              {"company": "PepsiCo",                      "name": "Alexis Porter",     "title": "VP, Lay's, Global Foods Group",                       "linkedin": "https://www.linkedin.com/in/alexis-porter-1464724/"},
+  "Kettle Brand":       {"company": "The Campbell's Company",       "name": "Matthew Venturella","title": "Senior Brand Manager, Kettle Brand",                  "linkedin": "https://www.linkedin.com/in/mattventurella/"},
+  "Cape Cod":           {"company": "The Campbell's Company",       "name": "Kristina Moses",    "title": "Senior Brand Manager, Cape Cod",                      "linkedin": "https://www.linkedin.com/in/kristinakirkmoses/"},
+  "Takis":              {"company": "Barcel USA (Grupo Bimbo)",     "name": "Trevor Moore",      "title": "Brand Manager, Takis",                                "linkedin": "https://www.linkedin.com/in/trevor-moore-6a51b594/"},
+  "Pringles":           {"company": "Mars (Kellanova)",             "name": "Liz Thomas",        "title": "Global Marketing Director, Pringles & Cheez-It",      "linkedin": "https://www.linkedin.com/in/lizthomas15/"},
+  "SkinnyPop":          {"company": "The Hershey Company",          "name": "Hannah Sheffield",  "title": "Senior Brand Manager, SkinnyPop & Pirate's Booty",    "linkedin": "https://www.linkedin.com/in/hannahsheffield/"},
+  "LesserEvil":         {"company": "LesserEvil (Hershey)",         "name": "Ali Broderick",     "title": "Associate Director, Brand Marketing",                 "linkedin": "https://www.linkedin.com/in/alison-broderick/"},
+  "Snickers":           {"company": "Mars",                         "name": "Lindsay Gatto",     "title": "Senior Manager, Digital Strategy",                    "linkedin": "https://www.linkedin.com/in/lindsaygatto/"},
+  "Twix":               {"company": "Mars",                         "name": "Lindsay Gatto",     "title": "Senior Manager, Digital Strategy",                    "linkedin": "https://www.linkedin.com/in/lindsaygatto/"},
+  "3 Musketeers":       {"company": "Mars",                         "name": "Lindsay Gatto",     "title": "Senior Manager, Digital Strategy",                    "linkedin": "https://www.linkedin.com/in/lindsaygatto/"},
+  "Reese's":            {"company": "The Hershey Company",          "name": "Samantha Siegal",   "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat", "linkedin": "https://www.linkedin.com/in/samantha-siegal/"},
+  "Kit Kat":            {"company": "The Hershey Company",          "name": "Samantha Siegal",   "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat", "linkedin": "https://www.linkedin.com/in/samantha-siegal/"},
+  "Hershey's":          {"company": "The Hershey Company",          "name": "Samantha Siegal",   "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat", "linkedin": "https://www.linkedin.com/in/samantha-siegal/"},
+  "Lily's":             {"company": "The Hershey Company",          "name": "Samantha Siegal",   "title": "Senior Marketing Director, Reese's, Hershey's, Kit Kat", "linkedin": "https://www.linkedin.com/in/samantha-siegal/"},
+  "Tony's Chocolonely": {"company": "Tony's Chocolonely",           "name": "Madison Marisi",    "title": "VP of Marketing, North America",                      "linkedin": "https://www.linkedin.com/in/madison-marisi/"},
+  "Hu":                 {"company": "Mondelez",                     "name": "Grace Gallic",      "title": "Associate Brand Manager, Innovation, Hu",             "linkedin": "https://www.linkedin.com/in/gracegallic/"},
+  "Unreal":             {"company": "Unreal Snacks",                "name": "Brooke Palandro",   "title": "Director of Brand Voice",                             "linkedin": "https://www.linkedin.com/in/brooke-palandro/"}
+}

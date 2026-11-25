@@ -1,0 +1,234 @@
+{
+ "_note": "tracked = the brands on the scorecard. competitors = everything else worth counting. Patterns are Python regexes, matched case-insensitively unless the pattern starts with (?-i). fit = the questions a brand should win (used to pick the gap in each brand's opening line).",
+ "tracked": {
+  "Lay's": {
+   "group": "chips",
+   "pattern": "\\blay[’']?s\\b",
+   "fit": [
+    "healthy_chips",
+    "kids_chips",
+    "spicy_chips"
+   ]
+  },
+  "Doritos": {
+   "group": "chips",
+   "pattern": "doritos",
+   "fit": [
+    "kids_chips",
+    "party_chips",
+    "spicy_chips"
+   ]
+  },
+  "Pringles": {
+   "group": "chips",
+   "pattern": "pringles",
+   "fit": [
+    "party_chips",
+    "kids_chips",
+    "gf_chips"
+   ]
+  },
+  "Cheetos": {
+   "group": "chips",
+   "pattern": "cheetos",
+   "fit": [
+    "gf_chips",
+    "kids_chips",
+    "party_chips"
+   ]
+  },
+  "Takis": {
+   "group": "chips",
+   "pattern": "\\btakis\\b",
+   "fit": [
+    "party_chips",
+    "gf_chips"
+   ]
+  },
+  "Kettle Brand": {
+   "group": "chips",
+   "pattern": "kettle brand",
+   "fit": [
+    "healthy_chips",
+    "kids_chips",
+    "bfy_brands"
+   ]
+  },
+  "Cape Cod": {
+   "group": "chips",
+   "pattern": "cape cod",
+   "fit": [
+    "healthy_chips",
+    "kids_chips",
+    "bfy_brands"
+   ]
+  },
+  "Siete": {
+   "group": "chips",
+   "pattern": "\\bsiete\\b",
+   "fit": [
+    "spicy_chips",
+    "healthy_chips",
+    "kids_chips"
+   ]
+  },
+  "SkinnyPop": {
+   "group": "chips",
+   "pattern": "skinny ?pop",
+   "fit": [
+    "healthy_chips",
+    "bfy_brands",
+    "kids_chips"
+   ]
+  },
+  "LesserEvil": {
+   "group": "chips",
+   "pattern": "lesser ?evil",
+   "fit": [
+    "healthy_chips",
+    "kids_chips",
+    "bfy_brands"
+   ]
+  },
+  "Snickers": {
+   "group": "candy",
+   "pattern": "snickers",
+   "fit": [
+    "best_candy",
+    "healthy_candy"
+   ]
+  },
+  "Reese's": {
+   "group": "candy",
+   "pattern": "\\breese",
+   "fit": [
+    "best_candy",
+    "healthy_candy"
+   ]
+  },
+  "Kit Kat": {
+   "group": "candy",
+   "pattern": "kit ?kat",
+   "fit": [
+    "best_candy",
+    "healthy_candy"
+   ]
+  },
+  "Twix": {
+   "group": "candy",
+   "pattern": "\\btwix\\b",
+   "fit": [
+    "best_candy",
+    "healthy_candy"
+   ]
+  },
+  "Hershey's": {
+   "group": "candy",
+   "pattern": "hershey",
+   "fit": [
+    "best_candy",
+    "healthy_candy",
+    "lowsugar_choc"
+   ]
+  },
+  "3 Musketeers": {
+   "group": "candy",
+   "pattern": "(3|three) musketeers",
+   "fit": [
+    "best_candy",
+    "healthy_candy"
+   ]
+  },
+  "Tony's Chocolonely": {
+   "group": "candy",
+   "pattern": "chocolonely|tony[’']?s choc",
+   "fit": [
+    "ethical_choc",
+    "best_candy",
+    "vegan_choc"
+   ]
+  },
+  "Hu": {
+   "group": "candy",
+   "pattern": "(?-i:\\b(Hu|HU)(?:[’']s)?\\b)",
+   "fit": [
+    "vegan_choc",
+    "healthy_candy",
+    "lowsugar_choc",
+    "bfy_brands"
+   ]
+  },
+  "Unreal": {
+   "group": "candy",
+   "pattern": "\\bunreal\\b",
+   "fit": [
+    "healthy_candy",
+    "lowsugar_choc",
+    "vegan_choc",
+    "bfy_brands"
+   ]
+  },
+  "Lily's": {
+   "group": "candy",
+   "pattern": "\\blily[’']?s\\b",
+   "fit": [
+    "lowsugar_choc",
+    "healthy_candy",
+    "bfy_brands"
+   ]
+  }
+ },
+ "competitors": {
+  "Popchips": "popchips",
+  "Jackson's": "jackson[’']?s",
+  "Quest": "\\bquest\\b",
+  "Brad's": "\\bbrad[’']?s\\b",
+  "Food Should Taste Good": "food should taste good",
+  "Biena": "\\bbiena\\b",
+  "Good Health": "good health",
+  "Boulder Canyon": "boulder canyon",
+  "Late July": "late july",
+  "Ruffles": "ruffles",
+  "Tostitos": "tostitos",
+  "Fritos": "\\bfritos\\b",
+  "SunChips": "sun ?chips",
+  "Terra": "\\bterra\\b",
+  "Beanitos": "beanitos",
+  "Hippeas": "hippeas",
+  "Harvest Snaps": "harvest snaps",
+  "Herr's": "\\bherr[’']?s\\b",
+  "Popcorners": "popcorners",
+  "Good Crisp": "good crisp",
+  "Wilde": "\\bwilde\\b",
+  "Simple Mills": "simple mills",
+  "Chomps": "\\bchomps\\b",
+  "RXBAR": "rx ?bar",
+  "SmartSweets": "smart ?sweets",
+  "Goldfish": "goldfish",
+  "Cheez-It": "cheez",
+  "Stacy's": "stacy[’']?s",
+  "Utz": "\\butz (?!certif)",
+  "Funyuns": "funyuns",
+  "Zapp's": "zapp[’']?s",
+  "Lindt": "\\blindt\\b",
+  "Alter Eco": "alter eco",
+  "Endangered Species": "endangered species",
+  "Divine": "\\bdivine chocolate",
+  "Beyond Good": "beyond good",
+  "Raaka": "\\braaka\\b",
+  "Taza": "\\btaza\\b",
+  "Theo": "\\btheo chocolate|\\btheo\\b",
+  "ChocZero": "choczero",
+  "Spring & Mulberry": "spring ?& ?mulberry",
+  "Pascha": "\\bpascha\\b",
+  "Payday": "pay ?day",
+  "Almond Joy": "almond joy",
+  "Milky Way": "milky way",
+  "Butterfinger": "butterfinger",
+  "Mounds": "\\bmounds\\b",
+  "Cadbury": "cadbury",
+  "M&M's": "m&m",
+  "Ghirardelli": "ghirardelli",
+  "Dandelion": "dandelion chocolate|\\bdandelion\\b"
+ }
+}

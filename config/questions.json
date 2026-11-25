@@ -1,0 +1,14 @@
+[
+  {"id": "healthy_chips",   "text": "What are the best healthy chips?",                 "category": "chips"},
+  {"id": "party_chips",     "text": "What are the best chips for a party?",             "category": "chips"},
+  {"id": "gf_chips",        "text": "What are the best gluten-free chips?",             "category": "chips"},
+  {"id": "spicy_chips",     "text": "What are the best spicy chips?",                   "category": "chips"},
+  {"id": "kids_chips",      "text": "What are the best chips for kids' lunches?",       "category": "chips"},
+  {"id": "best_candy",      "text": "What is the best candy bar?",                      "category": "candy"},
+  {"id": "healthy_candy",   "text": "What is the healthiest candy bar?",                "category": "candy"},
+  {"id": "lowsugar_choc",   "text": "What is the best low-sugar chocolate bar?",        "category": "candy"},
+  {"id": "vegan_choc",      "text": "What is the best vegan chocolate bar?",            "category": "candy"},
+  {"id": "road_trip",       "text": "What are the best snacks for a road trip?",        "category": "both"},
+  {"id": "ethical_choc",    "text": "What is the most ethical chocolate brand?",        "category": "candy"},
+  {"id": "bfy_brands",      "text": "What are the best better-for-you snack brands?",   "category": "both"}
+]

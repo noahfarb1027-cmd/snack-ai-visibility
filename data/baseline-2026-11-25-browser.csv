@@ -1,0 +1,81 @@
+date,engine,brand,group,mentions,possible,share,first
+2026-11-25,chatgpt,Lay's,chips,2,14,0.143,
+2026-11-25,gemini,Lay's,chips,4,14,0.286,
+2026-11-25,perplexity,Lay's,chips,5,14,0.357,
+2026-11-25,all,Lay's,chips,11,42,0.262,3
+2026-11-25,chatgpt,Doritos,chips,4,14,0.286,
+2026-11-25,gemini,Doritos,chips,6,14,0.429,
+2026-11-25,perplexity,Doritos,chips,5,14,0.357,
+2026-11-25,all,Doritos,chips,15,42,0.357,0
+2026-11-25,chatgpt,Pringles,chips,0,14,0.0,
+2026-11-25,gemini,Pringles,chips,1,14,0.071,
+2026-11-25,perplexity,Pringles,chips,6,14,0.429,
+2026-11-25,all,Pringles,chips,7,42,0.167,0
+2026-11-25,chatgpt,Cheetos,chips,2,14,0.143,
+2026-11-25,gemini,Cheetos,chips,2,14,0.143,
+2026-11-25,perplexity,Cheetos,chips,5,14,0.357,
+2026-11-25,all,Cheetos,chips,9,42,0.214,0
+2026-11-25,chatgpt,Takis,chips,2,14,0.143,
+2026-11-25,gemini,Takis,chips,3,14,0.214,
+2026-11-25,perplexity,Takis,chips,3,14,0.214,
+2026-11-25,all,Takis,chips,8,42,0.19,6
+2026-11-25,chatgpt,Kettle Brand,chips,5,14,0.357,
+2026-11-25,gemini,Kettle Brand,chips,5,14,0.357,
+2026-11-25,perplexity,Kettle Brand,chips,6,14,0.429,
+2026-11-25,all,Kettle Brand,chips,16,42,0.381,3
+2026-11-25,chatgpt,Cape Cod,chips,4,14,0.286,
+2026-11-25,gemini,Cape Cod,chips,4,14,0.286,
+2026-11-25,perplexity,Cape Cod,chips,4,14,0.286,
+2026-11-25,all,Cape Cod,chips,12,42,0.286,1
+2026-11-25,chatgpt,Siete,chips,7,14,0.5,
+2026-11-25,gemini,Siete,chips,9,14,0.643,
+2026-11-25,perplexity,Siete,chips,7,14,0.5,
+2026-11-25,all,Siete,chips,23,42,0.548,7
+2026-11-25,chatgpt,SkinnyPop,chips,0,14,0.0,
+2026-11-25,gemini,SkinnyPop,chips,0,14,0.0,
+2026-11-25,perplexity,SkinnyPop,chips,0,14,0.0,
+2026-11-25,all,SkinnyPop,chips,0,42,0.0,0
+2026-11-25,chatgpt,LesserEvil,chips,3,14,0.214,
+2026-11-25,gemini,LesserEvil,chips,4,14,0.286,
+2026-11-25,perplexity,LesserEvil,chips,1,14,0.071,
+2026-11-25,all,LesserEvil,chips,8,42,0.19,1
+2026-11-25,chatgpt,Snickers,candy,3,14,0.214,
+2026-11-25,gemini,Snickers,candy,4,14,0.286,
+2026-11-25,perplexity,Snickers,candy,4,14,0.286,
+2026-11-25,all,Snickers,candy,11,42,0.262,6
+2026-11-25,chatgpt,Reese's,candy,2,14,0.143,
+2026-11-25,gemini,Reese's,candy,3,14,0.214,
+2026-11-25,perplexity,Reese's,candy,4,14,0.286,
+2026-11-25,all,Reese's,candy,9,42,0.214,2
+2026-11-25,chatgpt,Kit Kat,candy,1,14,0.071,
+2026-11-25,gemini,Kit Kat,candy,2,14,0.143,
+2026-11-25,perplexity,Kit Kat,candy,2,14,0.143,
+2026-11-25,all,Kit Kat,candy,5,42,0.119,0
+2026-11-25,chatgpt,Twix,candy,1,14,0.071,
+2026-11-25,gemini,Twix,candy,3,14,0.214,
+2026-11-25,perplexity,Twix,candy,1,14,0.071,
+2026-11-25,all,Twix,candy,5,42,0.119,0
+2026-11-25,chatgpt,Hershey's,candy,0,14,0.0,
+2026-11-25,gemini,Hershey's,candy,2,14,0.143,
+2026-11-25,perplexity,Hershey's,candy,1,14,0.071,
+2026-11-25,all,Hershey's,candy,3,42,0.071,0
+2026-11-25,chatgpt,3 Musketeers,candy,0,14,0.0,
+2026-11-25,gemini,3 Musketeers,candy,1,14,0.071,
+2026-11-25,perplexity,3 Musketeers,candy,0,14,0.0,
+2026-11-25,all,3 Musketeers,candy,1,42,0.024,0
+2026-11-25,chatgpt,Tony's Chocolonely,candy,2,14,0.143,
+2026-11-25,gemini,Tony's Chocolonely,candy,3,14,0.214,
+2026-11-25,perplexity,Tony's Chocolonely,candy,5,14,0.357,
+2026-11-25,all,Tony's Chocolonely,candy,10,42,0.238,6
+2026-11-25,chatgpt,Hu,candy,6,14,0.429,
+2026-11-25,gemini,Hu,candy,7,14,0.5,
+2026-11-25,perplexity,Hu,candy,2,14,0.143,
+2026-11-25,all,Hu,candy,15,42,0.357,5
+2026-11-25,chatgpt,Unreal,candy,2,14,0.143,
+2026-11-25,gemini,Unreal,candy,4,14,0.286,
+2026-11-25,perplexity,Unreal,candy,3,14,0.214,
+2026-11-25,all,Unreal,candy,9,42,0.214,2
+2026-11-25,chatgpt,Lily's,candy,2,14,0.143,
+2026-11-25,gemini,Lily's,candy,4,14,0.286,
+2026-11-25,perplexity,Lily's,candy,2,14,0.143,
+2026-11-25,all,Lily's,candy,8,42,0.19,4
