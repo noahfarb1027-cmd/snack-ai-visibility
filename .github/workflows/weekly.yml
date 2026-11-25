@@ -18,6 +18,7 @@ permissions:
   contents: write           # so the job can commit results back to the repo
   pages: write              # so it can publish the dashboard
   id-token: write
+  actions: read             # lets the deploy step find the uploaded page
 
 concurrency:
   group: pages
