@@ -9,6 +9,10 @@ on:
         description: "Test only: ask each question once, save and publish nothing"
         type: boolean
         default: false
+      publish_only:
+        description: "Publish only: rebuild the page from saved data without asking the engines"
+        type: boolean
+        default: false
 
 permissions:
   contents: write           # so the job can commit results back to the repo
@@ -36,6 +40,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Ask the engines and score
+        if: ${{ !inputs.publish_only }}
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -49,7 +54,7 @@ jobs:
         run: python build_dashboard.py
 
       - name: Commit results
-        if: ${{ !inputs.test }}
+        if: ${{ !inputs.test && !inputs.publish_only }}
         run: |
           git config user.name "aeo-tracker-bot"
           git config user.email "actions@users.noreply.github.com"
@@ -59,7 +64,7 @@ jobs:
 
       - uses: actions/configure-pages@v5
         if: ${{ !inputs.test }}
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         if: ${{ !inputs.test }}
         with:
           path: site
