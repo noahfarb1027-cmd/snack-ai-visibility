@@ -100,6 +100,18 @@ def opener(brand, s, gaps, qmap, fit):
     return f"{brand} came up in {s['mentions']} of {s['possible']} AI answers this week ({pct}%)."
 
 
+# Brands with the same parent company aren't each other's competition in an email line
+OWNER = {}
+for parent, names in {
+    "Hershey": ["Hershey's", "Reese's", "Kit Kat", "Lily's", "SkinnyPop", "LesserEvil", "Dot's", "Pirate's Booty", "Cadbury"],
+    "PepsiCo": ["Doritos", "Cheetos", "Lay's", "Siete", "Tostitos", "Ruffles", "SunChips", "Fritos", "Popcorners", "Stacy's", "Smartfood"],
+    "Mars": ["Snickers", "Twix", "3 Musketeers", "Milky Way", "M&M's", "Pringles", "Cheez-It"],
+    "Campbell's": ["Kettle Brand", "Cape Cod", "Late July", "Snyder's", "Pop Secret"],
+    "Mondelez": ["Hu", "Clif"],
+}.items():
+    for n in names:
+        OWNER[n] = parent
+
 CATEGORY = {"chips": "chip-buying", "candy": "candy and chocolate"}
 ENGINE_LIST = "ChatGPT, Gemini and Perplexity"
 
@@ -121,7 +133,7 @@ def intro(brand, info, s, gaps, qmap, fit):
                  f", and was the first brand recommended {s['first']} times.")
     if gaps:
         g = gaps[0]
-        w = [x[0] for x in g["winners"][:3]]
+        w = [x[0] for x in g["winners"] if OWNER.get(x[0]) is None or OWNER.get(x[0]) != OWNER.get(brand)][:3]
         q = qmap[g["qid"]]["text"].rstrip("?")
         tail = f" When asked \u201c{q}?\u201d none of them mentioned {brand}"
         tail += f"; they recommended {', '.join(w[:-1])} and {w[-1]} instead." if len(w) > 1 else "."
