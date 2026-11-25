@@ -40,6 +40,13 @@ h2{font-size:22px;letter-spacing:-.01em;font-weight:600;margin:0 0 6px}
 .pc{text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
 .axis{display:grid;grid-template-columns:11em minmax(0,1fr) 3.4em;gap:10px;color:var(--quiet);font-size:13px}
 .axis div{display:flex;justify-content:space-between}
+.det{margin:4px 0 12px;padding:14px 16px;background:var(--bg);border:1px solid var(--rule);border-left:3px solid var(--pt);border-radius:4px;display:grid;gap:12px}
+.det h3{margin:0;font-size:16px;font-weight:600}
+.det .dq b{font-weight:500}
+.det .dq p{margin:2px 0 0;color:var(--quiet);font-size:14px}
+.qrow{display:grid;grid-template-columns:minmax(0,1fr) 5.5em;align-items:center;gap:10px;padding:4px 0}
+.det .line{margin:0;font-size:15px}
+.det .x{justify-self:start;font:inherit;font-size:14px;min-height:36px;padding:0 12px;border:1px solid var(--rule);background:transparent;color:var(--ink);border-radius:6px;cursor:pointer}
 .two{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px;margin-top:24px}
 .card{background:var(--panel);border:1px solid var(--rule);padding:18px}
 .fig{position:relative;height:220px;margin-top:8px}.fig>svg{position:absolute;inset:0;width:100%;height:100%}
@@ -86,7 +93,7 @@ body:not([data-view=outreach]) .out{display:none}
   <p class="sub" id="sub"></p>
   <div class="read" id="read"></div>
   <div class="ctl">
-    <p class="hint">Click any brand to see the questions it's measured on and who AI recommends instead.</p>
+    <p class="hint">Click any brand to open the questions it's measured on and who AI recommends instead.</p>
     <div class="chips" id="chips" role="group" aria-label="Show brands">
       <button aria-pressed="true" data-g="all">All 20</button><button aria-pressed="false" data-g="chips">Chips</button><button aria-pressed="false" data-g="candy">Candy and chocolate</button>
     </div>
@@ -98,15 +105,11 @@ body:not([data-view=outreach]) .out{display:none}
   </div>
 </div></header>
 
-<section class="band dash" style="padding-top:0"><div class="wrap two">
+<section class="band dash" style="padding-top:0"><div class="wrap">
   <div class="card" id="trend-card">
     <h2 id="trend-title">Trend</h2>
     <p class="sub" id="trend-sub"></p>
     <div class="fig"><svg id="trend" role="img" aria-label="Share of AI answers by week"></svg></div>
-  </div>
-  <div class="card">
-    <h2 id="gap-title">Where it's missing</h2>
-    <div class="qs" id="gaps"></div>
   </div>
 </div></section>
 
@@ -166,7 +169,7 @@ function boot(data){
     movers?[(movers.change>0?'+':'')+Math.round(movers.change*100)+' pts',`biggest move: ${movers.brand}`]:[String(D.weeks.length),`week${D.weeks.length>1?'s':''} tracked so far`]
   ];
   document.getElementById('read').innerHTML=reads.map(r=>`<div><b>${esc(r[0])}</b><span>${esc(r[1])}</span></div>`).join('');
-  document.getElementById('legend').innerHTML='<span>Bar: share of answers naming the brand, counting only the questions it competes in (click a brand to see them)</span>'+Object.entries(ENG).filter(([k])=>D.engines.includes(k)).map(([,v])=>`<span><i style="background:${v.c}"></i>${v.n}</span>`).join('');
+  document.getElementById('legend').innerHTML='<span>Bar: share of answers naming the brand, counting only the questions it competes in (click a brand to open its details)</span>'+Object.entries(ENG).filter(([k])=>D.engines.includes(k)).map(([,v])=>`<span><i style="background:${v.c}"></i>${v.n}</span>`).join('');
   document.getElementById('method').textContent=`Each Monday a script asks ChatGPT, Gemini and Perplexity the same 12 snack-buying questions several times and records which brands every answer names. A brand's share counts only the questions it competes in (for example, Twix is measured on the best and healthiest candy bar questions, never on chips); the dashboard lists those questions for every brand. "First pick" is the first brand an answer names. This week's data: ${D.source_this_week}. Contacts are public profile details (name, title, LinkedIn) for each brand's marketing lead; no outreach has been sent from this page, and email addresses are not published here.`;
   scale();qtable();leads();outreach();focus(sel);
   document.getElementById('chips').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;group=b.dataset.g;for(const x of document.querySelectorAll('#chips button'))x.setAttribute('aria-pressed',x===b);
@@ -180,19 +183,32 @@ function scale(){
   document.getElementById('scale').innerHTML=rows.map(b=>{
     const ticks=Object.entries(b.by_engine).map(([e,v])=>ENG[e]?`<span class="tick" style="left:${v*100}%;background:${ENG[e].c}" title="${esc(ENG[e].n)}: ${pct(v)}"></span>`:'').join('');
     return `<div class="row" data-b="${esc(b.brand)}" title="${esc((b.fit_questions||[]).map(q=>q.text).join(' \u00b7 '))}" tabindex="0" role="button" aria-label="${esc(b.brand)} ${pct(b.share)}"><span class="nm">${esc(b.brand)} <small>${b.group==='chips'?'chips':'candy'}</small></span><div class="trk"><div class="fill" style="width:${b.share*100}%"></div>${ticks}</div><span class="pc">${pct(b.share)}</span></div>`}).join('');
-  for(const r of document.querySelectorAll('.row')){r.addEventListener('click',()=>focus(r.dataset.b));r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focus(r.dataset.b)}})}
+  for(const r of document.querySelectorAll('#scale .row')){r.addEventListener('click',()=>focus(r.dataset.b,true));r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();focus(r.dataset.b,true)}})}
 }
 
-function focus(name){
-  sel=name;const b=D.brands.find(x=>x.brand===name);
-  for(const r of document.querySelectorAll('.row'))r.classList.toggle('on',r.dataset.b===name);
+let open=false;
+function detail(b){
+  const gapBy=Object.fromEntries(b.gaps.map(g=>[g.question,g]));
+  const qs=(b.fit_questions||[]).map(q=>{const g=gapBy[q.text];const share=q.n?q.m/q.n:0;return `<div class="dq"><b>${esc(q.text)}</b>
+    <div class="qrow"><div class="trk"><div class="fill" style="width:${share*100}%"></div></div><span class="pc">${q.m} of ${q.n}</span></div>
+    ${g?`<p>Named instead: ${g.winners.slice(0,4).map(w=>`${esc(w[0])} (${w[1]})`).join(', ')}</p>`:''}</div>`}).join('');
+  const eng=Object.entries(b.by_engine).filter(([e])=>ENG[e]).map(([e,v])=>`${ENG[e].n} ${pct(v)}`).join(' \u00b7 ');
+  return `<h3>${esc(b.brand)}: named in ${b.mentions} of ${b.possible} answers to the questions it competes in</h3>
+    <p class="line" style="color:var(--quiet)">${esc(eng)} \u00b7 first pick ${b.first} time${b.first===1?'':'s'}</p>${qs}
+    <p class="line">${esc(b.intro||b.opener)}</p><button class="x" type="button">Close</button>`;
+}
+function focus(name,toggle){
+  if(toggle&&name===sel&&open){open=false}else{open=!!toggle||open;sel=name}
+  const b=D.brands.find(x=>x.brand===sel);
+  for(const r of document.querySelectorAll('#scale .row'))r.classList.toggle('on',r.dataset.b===sel);
+  for(const d of document.querySelectorAll('#scale .det'))d.remove();
+  const row=document.querySelector(`#scale .row[data-b="${CSS.escape(sel)}"]`);
+  if(open&&row){const d=document.createElement('div');d.className='det';d.innerHTML=detail(b);row.after(d);
+    d.querySelector('.x').addEventListener('click',()=>focus(sel,true));
+    if(d.getBoundingClientRect().bottom>innerHeight)d.scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}
+  if(row)row.setAttribute('aria-expanded',String(open));
   document.getElementById('trend-title').textContent=`${b.brand}: named in ${b.mentions} of ${b.possible} answers (${pct(b.share)})`;
   document.getElementById('trend-sub').textContent=D.weeks.length>1?`Weekly share since ${fmtDate(D.weeks[0])}, overall and by engine`:`One week so far; the line grows every Monday`;
-  document.getElementById('gap-title').textContent=`The questions ${b.brand} is measured on`;
-  const gapBy=Object.fromEntries(b.gaps.map(g=>[g.question,g]));
-  document.getElementById('gaps').innerHTML=(b.fit_questions||[]).map(q=>{const g=gapBy[q.text];const share=q.n?q.m/q.n:0;return `<div><b>${esc(q.text)}</b>
-    <div class="row" style="cursor:default;padding:4px 0;grid-template-columns:minmax(0,1fr) 5.5em"><div class="trk"><div class="fill" style="width:${share*100}%"></div></div><span class="pc">${q.m} of ${q.n}</span></div>
-    ${g?`<p>Named instead: ${g.winners.slice(0,4).map(w=>`${esc(w[0])} (${w[1]})`).join(', ')}</p>`:''}</div>`}).join('')||`<p>${esc(b.opener)}</p>`;
   drawTrend();
 }
 
