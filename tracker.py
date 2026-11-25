@@ -30,8 +30,8 @@ TIMEOUT = 120
 
 # ---------------------------------------------------------------- engines
 def ask_openai(q):
-    key = os.environ["OPENAI_API_KEY"]
-    model = os.getenv("OPENAI_MODEL", "gpt-4.1-mini")
+    key = os.environ["OPENAI_API_KEY"].strip()  # pasted keys often carry a stray space or newline
+    model = os.getenv("OPENAI_MODEL") or "gpt-4.1-mini"
     # web search on, so the answer reflects what ChatGPT with search would say
     for tool in ("web_search", "web_search_preview"):
         r = requests.post(
@@ -52,8 +52,8 @@ def ask_openai(q):
 
 
 def ask_gemini(q):
-    key = os.environ["GEMINI_API_KEY"]
-    model = os.getenv("GEMINI_MODEL", "gemini-2.5-flash")
+    key = os.environ["GEMINI_API_KEY"].strip()  # pasted keys often carry a stray space or newline
+    model = os.getenv("GEMINI_MODEL") or "gemini-flash-latest"  # alias follows Google's current Flash model
     r = requests.post(
         f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent",
         params={"key": key},
@@ -67,8 +67,8 @@ def ask_gemini(q):
 
 
 def ask_perplexity(q):
-    key = os.environ["PERPLEXITY_API_KEY"]
-    model = os.getenv("PERPLEXITY_MODEL", "sonar")
+    key = os.environ["PERPLEXITY_API_KEY"].strip()  # pasted keys often carry a stray space or newline
+    model = os.getenv("PERPLEXITY_MODEL") or "sonar"
     r = requests.post(
         "https://api.perplexity.ai/chat/completions",
         headers={"Authorization": f"Bearer {key}"},
@@ -197,14 +197,19 @@ def main():
                         text = ask_mock(q["text"], e, brands) if args.mock else ENGINES[e][1](q["text"])
                     except Exception as err:  # keep going; one bad call shouldn't kill the week
                         failures += 1
-                        print(f"[{e}] {q['id']} run {run} failed: {err}", file=sys.stderr)
+                        detail = ""
+                        resp = getattr(err, "response", None)
+                        if resp is not None:
+                            detail = " | " + resp.text[:200].replace("\n", " ")
+                        print(f"[{e}] {q['id']} run {run} failed: {str(err).split('?')[0]}{detail}", file=sys.stderr)
                         continue
                     found = mentions(text, pats)
                     rec = {"date": today, "engine": e, "question_id": q["id"], "run": run,
                            "brands": found, "text": text}
                     raw.write(json.dumps(rec) + "\n")
                     answers.append(rec)
-                    print(f"[{e}] {q['id']} run {run}: {', '.join(found[:6]) or '(no brands)'}")
+                    shown = ', '.join(found[:6]) or f"(no brands; {len(text)} chars: {text[:100]!r})"
+                    print(f"[{e}] {q['id']} run {run}: {shown}")
                     if not args.mock:
                         time.sleep(1)  # stay well under rate limits
 
